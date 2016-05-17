@@ -1,24 +1,33 @@
-'use strict';
-console.log('head.js ran');
+
 
 import React from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery';
 
-const Head = React.createClass({
-
-  render : function() {
+export default class Head extends React.Component {
 
 
-    return (
+  render(){
+
+    return(
       <div id="headContainer">
-        <div>Welcome</div>
-        <div>to the personal page of</div>
-        <div>Patrick McWilliams!</div>
+        <div>Welcome to BRANDNAME.com!</div>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/mcwilliamspatrick">LinkedIn</a></li>
+          <li><a href="https://github.com/MelanistOnca">GitHub</a></li>
+          <li><a href="">General Assembly</a></li>
+          <li><a href="">BRANDNAME twitter account</a></li>
+          <li>PLACEHOLDER</li>
+        </ul>
+
+
+
+
+
+
+
+
       </div>
     )
   }
-
-})
-
-export default Head;
+}

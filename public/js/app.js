@@ -1,5 +1,5 @@
-'use strict';
-console.log('app.js ran');
+// 'use strict';
+
 // const React = require('react');
 // const ReactDOM = require('react-dom');
 // const $ = require('jquery');
@@ -7,7 +7,8 @@ console.log('app.js ran');
 import React from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery';
-import Head from './head'
+import Site from './site';
+// import Head from './head'
 
 // export default class App extends React.Component {
 //   render() {
@@ -18,9 +19,18 @@ import Head from './head'
 //   }
 // }
 
+// render(
+//   (
+//     <Head
+//       />
+//   ),
+//   // $('#container')
+//   document.getElementById('container')
+//
+// )
 render(
   (
-    <Head
+    <Site
       />
   ),
   // $('#container')
