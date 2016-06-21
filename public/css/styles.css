@@ -1,0 +1,115 @@
+div {
+  border: 1px solid;
+}
+
+/*COMPLIMENTARY COLORS
+
+blue
+HTML code:	#0F75BD
+RGB code:	R: 15 G: 117 B: 189
+HSV:	204.83° 92.06% 74.12%
+
+orange
+HTML code:	#FBA81A
+RGB code:	R: 251 G: 168 B: 26
+HSV:	37.87° 89.64% 98.43%
+*/
+a:link{
+  color: #0E5EE8;
+  background-color: #FBA81A;
+}
+
+
+#siteContainer {
+  display: flex;
+  flex-direction: column;
+  /*flex-direction: row;*/
+  /*justify-content: center;*/
+  /*justify-content: flex-end;*/
+  /*justify-content: flex-start;*/
+  /*-webkit-justify-content: center;*/
+  /*justify-content: -webkit-center;*/
+  /*justify-content: flex-end;*/
+  /*justify-content: flex-start;*/
+  /*display: -webkit-flex;
+  -webkit-flex-direction: column;*/
+
+  background-color: #0F75BD;
+  color: #FBA81A;
+
+  /*background-color: #FBA81A;
+  color: #0F75BD;*/
+
+}
+
+#headContainer {
+  /*background-color: grey;*/
+  /*display: flex;*/
+  text-align: center;
+}
+
+#headContainer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#headContainer ul li {
+  margin: auto;
+}
+
+#bodyContainer {
+  /*background-color: green;*/
+}
+
+#footContainer {
+  /*background-color: yellow;*/
+}
+
+#articleLinkContainer {
+  /*background-color: purple;*/
+  /*display:flex;
+  flex-direction: column;*/
+  /*text-align: center;*/
+}
+
+#articleLinkContainer ul {
+  /*background-color: purple;*/
+  /*display: flex;
+  flex-direction: column;*/
+  text-align: center;
+  justify-content: center;
+}
+
+#articleLinkContainer ul li {
+  /*background-color: blue;*/
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#projectLinkContainer {
+  /*background-color: red;*/
+
+}
+
+#projectLinkContainer ul {
+  list-style: none;
+  /*border: 1px grey;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*this is kind of working, but the description divs are too touchy*/
+  /*background-color: red; */
+  /*background color is working*/
+}
+
+#projectLinkContainer ul li {
+  margin: auto;
+}
+
+#otherLinkContainer {
+  /*background-color: pink;*/
+}

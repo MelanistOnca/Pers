@@ -37,3 +37,6 @@ bundle.js
 
 #ENV
 .env
+
+#scratchPad
+scratch.js

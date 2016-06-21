@@ -19,4 +19,4 @@ app.get('/', (req,res) => {
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`Your personal page server is running on port ${port}`);
-})
+}) 
