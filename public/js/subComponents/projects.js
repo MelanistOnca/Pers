@@ -17,9 +17,9 @@ export default class Projects extends React.Component {
           <li>
             <Project
               name="diceGame"
-              link="http://melanistonca.github.io/DiceBetteor/"
+              link="https://fast-bayou-12268.herokuapp.com/"
               title="Dice Game"
-              description="Here is the dice game"
+              description="Here a simple dice game"
               />
           </li>
           <li>

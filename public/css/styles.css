@@ -2,6 +2,24 @@ div {
   border: 1px solid;
 }
 
+/*COMPLIMENTARY COLORS
+
+blue
+HTML code:	#0F75BD
+RGB code:	R: 15 G: 117 B: 189
+HSV:	204.83° 92.06% 74.12%
+
+orange
+HTML code:	#FBA81A
+RGB code:	R: 251 G: 168 B: 26
+HSV:	37.87° 89.64% 98.43%
+*/
+a:link{
+  color: #0E5EE8;
+  background-color: #FBA81A;
+}
+
+
 #siteContainer {
   display: flex;
   flex-direction: column;
@@ -15,6 +33,12 @@ div {
   /*justify-content: flex-start;*/
   /*display: -webkit-flex;
   -webkit-flex-direction: column;*/
+
+  background-color: #0F75BD;
+  color: #FBA81A;
+
+  /*background-color: #FBA81A;
+  color: #0F75BD;*/
 
 }
 
