@@ -17,10 +17,10 @@ export default class Body extends React.Component {
       <div id="bodyContainer">
         <Projects
           />
-        <Articles
+        {/*<Articles
           />
         <Other
-          />
+          />*/}
       </div>
     )
   }

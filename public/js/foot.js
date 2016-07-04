@@ -12,7 +12,7 @@ export default class Foot extends React.Component {
 
     return(
       <div id="footContainer">
-        <div><a>webform to send me e-mails without giving out my email address?</a></div>
+        {/*<div><a>webform to send me e-mails without giving out my email address?</a></div>*/}
       </div>
     )
   }

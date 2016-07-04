@@ -25,7 +25,7 @@ export default class Projects extends React.Component {
           <li>
             <Project
               name="booksCrud"
-              link="www.google.com"
+              link="https://www.google.com"
               title="Book Tracker/Finder"
               description="Here is a link to google rather than my book app"
               />
@@ -33,7 +33,7 @@ export default class Projects extends React.Component {
           <li>
             <Project
               name="evolutionDemonstration"
-              link="www.bing.com"
+              link="https://www.bing.com"
               title="Simple Demonstration of Evolution"
               description="Here is a link to bing rather than my evolution project"
               />
@@ -41,7 +41,7 @@ export default class Projects extends React.Component {
           <li>
             <Project
               name="d3USTempData"
-              link="www.yahoo.com"
+              link="https://www.yahoo.com"
               title="Temp Anomaly By Year"
               description="Here is a link to yahoo (what?) rather than the group D3/API project"
               />

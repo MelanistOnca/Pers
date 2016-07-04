@@ -1,5 +1,6 @@
 div {
   border: 1px solid;
+  /*font-size: 3vh;*/
 }
 
 /*COMPLIMENTARY COLORS
@@ -14,9 +15,22 @@ HTML code:	#FBA81A
 RGB code:	R: 251 G: 168 B: 26
 HSV:	37.87° 89.64% 98.43%
 */
+li {
+
+}
+
 a:link{
   color: #0E5EE8;
   background-color: #FBA81A;
+  border-radius: 10%;
+  padding: 0 3px;
+  margin: 0 3px;
+}
+
+
+
+p {
+  padding: 0 1%;
 }
 
 
@@ -40,7 +54,11 @@ a:link{
   /*background-color: #FBA81A;
   color: #0F75BD;*/
 
+  font-size: 3vh;
+
+
 }
+
 
 #headContainer {
   /*background-color: grey;*/
