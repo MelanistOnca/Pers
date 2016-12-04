@@ -21,7 +21,7 @@ export default class Projects extends React.Component {
               title="Dice Game"
               description="Here a simple dice game"
               />
-          </li>
+          </li>{/*
           <li>
             <Project
               name="booksCrud"
@@ -45,7 +45,7 @@ export default class Projects extends React.Component {
               title="Temp Anomaly By Year"
               description="Here is a link to yahoo (what?) rather than the group D3/API project"
               />
-          </li>
+          </li> */}
         </ul>
       </div>
     )
