@@ -25,7 +25,7 @@ export default class Projects extends React.Component {
           <li>
             <Project
               name="bookList"
-              link="hhttps://floating-temple-72567.herokuapp.com/"
+              link="https://floating-temple-72567.herokuapp.com/"
               title="Book List app"
               description="CRUD app that allows you to search a 3rd party API for books. Includes user auth. Uses React, React-redux, PGP, Express, Node, and more. Hosted via Heroku, first load may take additional time."
               />
