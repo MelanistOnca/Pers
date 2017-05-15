@@ -20,8 +20,8 @@ li {
 }
 
 a:link{
-  color: #0E5EE8;
-  background-color: #FBA81A;
+  /*color: #0E5EE8;*/
+  /*background-color: #FBA81A;*/
   border-radius: 10%;
   padding: 0 3px;
   margin: 0 3px;
@@ -33,6 +33,17 @@ p {
   padding: 0 1%;
 }
 
+body {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #7A7A7A;
+
+}
+
+#container {
+  margin-right: 1vw;
+}
 
 #siteContainer {
   display: flex;
@@ -48,13 +59,14 @@ p {
   /*display: -webkit-flex;
   -webkit-flex-direction: column;*/
 
-  background-color: #0F75BD;
+  background-color: #7A7A7A;
   color: #FBA81A;
 
   /*background-color: #FBA81A;
   color: #0F75BD;*/
 
   font-size: 3vh;
+
 
 
 }
