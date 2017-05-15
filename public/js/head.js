@@ -24,6 +24,7 @@ export default class Head extends React.Component {
 
 
         </ul>
+        <div>Contact Me at Patrick.M.Professional [at] gmail</div>
 
 
 
