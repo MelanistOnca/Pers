@@ -139,6 +139,17 @@ body {
 #projectLinkContainer ul li {
   margin: auto;
 }
+.projectStyleWrapper {
+  display: flex
+
+}
+.projectDescriptionContainer {
+  flex: 1.2;
+  max-width: 500px;
+}
+.projectImageContainer {
+
+}
 
 #otherLinkContainer {
   /*background-color: pink;*/

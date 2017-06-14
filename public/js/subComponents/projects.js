@@ -20,7 +20,9 @@ export default class Projects extends React.Component {
               link="https://floating-temple-72567.herokuapp.com/"
               title="Book List app"
               description="CRUD app that allows you to search a 3rd party API for books. Includes user auth. Uses React, React-redux, PGP, Express, Node, and more. Hosted via Heroku, first load may take additional time."
+              photoLink="https://unsplash.com/photos/9BoqXzEeQqM"
               />
+            {/* use this photo "https://unsplash.com/photos/9BoqXzEeQqM" with maybe this badge https://unsplash.com/photos/9BoqXzEeQqM?modal=credit-badge */}
           </li>
           <li>
             <Project
@@ -28,7 +30,9 @@ export default class Projects extends React.Component {
               link="https://fast-bayou-12268.herokuapp.com/"
               title="Dice Game"
               description="Here is a simple dice game"
+              photoLink="https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk"
               />
+            {/* use this photo https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk with maybe this credit badge https://unsplash.com/search/photos/dice?modal=credit-badge&photo=kLMkSuriEwk */}
           </li>
           {/*
           <li>

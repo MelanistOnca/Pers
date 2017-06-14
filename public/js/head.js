@@ -9,6 +9,10 @@ export default class Head extends React.Component {
 
   render(){
 
+
+
+
+
     return(
       <div id="headContainer">
         <div>Welcome to UroborosInc.com!</div>
@@ -24,7 +28,7 @@ export default class Head extends React.Component {
 
 
         </ul>
-        <div>Contact Me at Patrick.M.Professional [at] gmail</div>
+        <div>Contact Me at Patrick.M.Professional [at] gmail [dot] com</div>
 
 
 
