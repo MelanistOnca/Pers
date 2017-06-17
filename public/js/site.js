@@ -6,6 +6,7 @@ import $ from 'jquery';
 import Head from './head';
 import Body from './body';
 import Foot from './foot';
+import Test from './test';
 
 export default class Site extends React.Component{
 
@@ -14,6 +15,10 @@ export default class Site extends React.Component{
 
     return(
       <div id="siteContainer">
+        {/*
+          <Test
+          />
+          */}
         <Head
           />
 

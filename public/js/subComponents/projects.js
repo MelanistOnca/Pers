@@ -10,9 +10,20 @@ export default class Projects extends React.Component {
 
   render(){
 
+    let bgStyles = {
+      // background: "radial-gradient(circle, #42f4d7, #7A7A7A)"
+      background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+      background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+      background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)"
+    }
+    let bufferStyle = {
+      margin: "2vh"
+    }
 
     return(
-      <div id="projectLinkContainer">
+      <div id="projectLinkContainer"
+        style={bgStyles}
+        >
         <ul>
           <li>
             <Project
@@ -20,7 +31,9 @@ export default class Projects extends React.Component {
               link="https://floating-temple-72567.herokuapp.com/"
               title="Book List app"
               description="CRUD app that allows you to search a 3rd party API for books. Includes user auth. Uses React, React-redux, PGP, Express, Node, and more. Hosted via Heroku, first load may take additional time."
+              photoLink="https://unsplash.com/photos/9BoqXzEeQqM"
               />
+            {/* use this photo "https://unsplash.com/photos/9BoqXzEeQqM" with maybe this badge https://unsplash.com/photos/9BoqXzEeQqM?modal=credit-badge */}
           </li>
           <li>
             <Project
@@ -28,7 +41,9 @@ export default class Projects extends React.Component {
               link="https://fast-bayou-12268.herokuapp.com/"
               title="Dice Game"
               description="Here is a simple dice game"
+              photoLink="https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk"
               />
+            {/* use this photo https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk with maybe this credit badge https://unsplash.com/search/photos/dice?modal=credit-badge&photo=kLMkSuriEwk */}
           </li>
           {/*
           <li>
