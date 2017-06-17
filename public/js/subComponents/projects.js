@@ -10,9 +10,20 @@ export default class Projects extends React.Component {
 
   render(){
 
+    let bgStyles = {
+      // background: "radial-gradient(circle, #42f4d7, #7A7A7A)"
+      background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+      background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+      background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)"
+    }
+    let bufferStyle = {
+      margin: "2vh"
+    }
 
     return(
-      <div id="projectLinkContainer">
+      <div id="projectLinkContainer"
+        style={bgStyles}
+        >
         <ul>
           <li>
             <Project

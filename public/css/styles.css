@@ -1,5 +1,5 @@
 div {
-  border: 1px solid;
+  border: 1px solid #FBA81A;
   /*font-size: 3vh;*/
 }
 
@@ -59,8 +59,13 @@ body {
   /*display: -webkit-flex;
   -webkit-flex-direction: column;*/
 
-  background-color: #7A7A7A;
-  color: #FBA81A;
+  /*background-color: #7A7A7A;*/
+  /*color: #FBA81A;*/
+  /*color: #7A7A7A;*/ /*mid grey*/
+  /*color: #606060; /* darker grey*/
+  /*color: #c9c9c9; /* lighter grey*/
+  /*color: #505050;  /* even darker grey*/
+  color: #202020; /* black*/
 
   /*background-color: #FBA81A;
   color: #0F75BD;*/
@@ -138,6 +143,8 @@ body {
 
 #projectLinkContainer ul li {
   margin: auto;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 .projectStyleWrapper {
   display: flex

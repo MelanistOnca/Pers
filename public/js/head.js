@@ -3,7 +3,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery';
-import d3 from 'd3';
+// import d3 from 'd3';
 
 export default class Head extends React.Component {
 
@@ -12,11 +12,16 @@ export default class Head extends React.Component {
 
 
 
-
+    let bgStyleTealYellow = {
+      background: "-webkit-linear-gradient(90deg, #42f4d7, #f7f76f)",
+      background: "-moz-linear-gradient(90deg, #42f4d7, #f7f76f)",
+      background: "linear-gradient(90deg, #42f4d7, #f7f76f)"
+      // background: "transparent"
+    }
 
     return(
-      <div id="headContainer">
-        <div>Welcome to UroborosInc.com!</div>
+      <div id="headContainer" style={bgStyleTealYellow}>
+        <div >Welcome to UroborosInc.com!</div>
         <ul>
           <li><a href="../assets/PatrickMcWilliams.pdf">Resume</a></li>
 

@@ -15,8 +15,10 @@ export default class Site extends React.Component{
 
     return(
       <div id="siteContainer">
-        <Test
+        {/*
+          <Test
           />
+          */}
         <Head
           />
 
