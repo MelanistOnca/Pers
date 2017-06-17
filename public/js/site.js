@@ -6,7 +6,7 @@ import $ from 'jquery';
 import Head from './head';
 import Body from './body';
 import Foot from './foot';
-import Test from './test';
+// import Test from './test';
 
 export default class Site extends React.Component{
 
