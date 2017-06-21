@@ -34,7 +34,7 @@ export default class Project extends React.Component {
       default:
 
     }
-    console.log(imgSrc, 'was imgSrc');
+    // console.log(imgSrc, 'was imgSrc');
 // the div id may be wonky
     return(
       <div id={`${this.props.name}ProjectContainer`}>
