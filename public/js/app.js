@@ -8,8 +8,8 @@ import React from 'react';
 import { render, ReactDOMServer } from 'react-dom';
 
 import $ from 'jquery';
-import Site from './site';
-import Test from './test2';
+// import Site from './site';
+// import Test from './test2';
 
 import Head from './head';
 import Body from './body';

@@ -16,7 +16,7 @@ const bodyParser = require('body-parser');
 
 // const React = require('react') ;
 // // import { renderToString } from 'react-dom/server';
-const ReactDOM = require('react-dom/server');
+const ReactDOM = require('react-dom');
 const ReactDOMServer = require('react-dom/server');
 // const Site = require('./public/js/site') ;
 // const App = require('./public/js/app') ;
@@ -44,22 +44,23 @@ app.use(bodyParser.json());
 //   console.log('hello');
 // })
 
+// NOTE: figure out how to over-ride whatever is automatically serving index.html at the '/' route
 
-app.get('/', (req,res) => {
-  console.log('--------');
-  console.log(ReactDOMServer);
-  console.log('--------');
-  // ReactDOMServer.renderToString('<h1>hello world</h1>')
-})
+// app.get('/', (req,res) => {
+//   console.log('--------');
+//   console.log(ReactDOMServer);
+//   console.log('--------');
+//   // ReactDOMServer.renderToString('<h1>hello world</h1>')
+// })
 // app.get('/', (req,res) => {
 //   console.log('bla');
 //   res.sendFile(path.join(__dirname, 'public/index.html'))
 // })
-app.get('/fuck', (req,res) => {
-  console.log('fuck you');
-  ReactDOMServer.renderToString(App)
-  console.log('fuck you');
-})
+// app.get('/fuck', (req,res) => {
+//   console.log('fuck you');
+//   ReactDOMServer.renderToString(App)
+//   console.log('fuck you');
+// })
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
