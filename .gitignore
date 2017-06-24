@@ -43,6 +43,3 @@ scratch.js
 
 #test files
 test.*
-
-#package-lock temp
-package-lock.json
