@@ -50,7 +50,7 @@ export default class Projects extends React.Component {
               name="menuApp"
               link="#"
               title="Menu App"
-              description="RoR menu app. Under development. Image is placeholder"
+              description="RoR menu app. Under development. Image is placeholder, link goes to #"
               photoLink="https:////i.imgur.com/ARwY0GWr.jpg"
               />
             {/* find photos */}
