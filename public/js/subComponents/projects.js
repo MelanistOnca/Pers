@@ -45,6 +45,16 @@ export default class Projects extends React.Component {
               />
             {/* use this photo https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk with maybe this credit badge https://unsplash.com/search/photos/dice?modal=credit-badge&photo=kLMkSuriEwk */}
           </li>
+          <li>
+            <Project
+              name="menuApp"
+              link="#"
+              title="Menu App"
+              description="RoR menu app. Under development. Image is placeholder"
+              photoLink="https:////i.imgur.com/ARwY0GWr.jpg"
+              />
+            {/* find photos */}
+          </li>
           {/*
           <li>
             <Project

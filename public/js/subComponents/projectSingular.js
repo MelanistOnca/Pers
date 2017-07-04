@@ -31,7 +31,10 @@ export default class Project extends React.Component {
       case "diceGame":
         imgSrc = '../assets/images/hugues-adamo-198006_300x200.jpeg'
         break;
+      case "menuApp":
+        imgSrc = '../assets/images/hugues-adamo-198006_300x200.jpeg'
       default:
+
 
     }
     // console.log(imgSrc, 'was imgSrc');
