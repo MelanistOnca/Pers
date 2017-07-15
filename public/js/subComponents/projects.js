@@ -14,11 +14,13 @@ export default class Projects extends React.Component {
       // background: "radial-gradient(circle, #42f4d7, #7A7A7A)"
       background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
       background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
-      background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)"
+      background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+      // margin: 0
+      padding: 0
     }
-    let bufferStyle = {
-      margin: "2vh"
-    }
+    // let bufferStyle = {
+    //   margin: "2vh"
+    // }
 
     return(
       <div id="projectLinkContainer"
