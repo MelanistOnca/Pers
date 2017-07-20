@@ -4,12 +4,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery';
 // import d3 from 'd3';
+import LayoutSelector from './subComponents/layoutSelector'
 
 export default class Head extends React.Component {
 
 
   render(){
-
+    // console.log(this.props, 'was this.props in head.js');
+    // console.log(this.state, 'was this.state in head.js');
+    // console.log(state, 'was state in head.js');
     // console.log(window.location, 'was window.location');
     // console.log(typeof window.location, 'was typeof for window.location'); //object
     // console.log(window.location.host, 'was window.location.host');
@@ -39,6 +42,9 @@ export default class Head extends React.Component {
 
         </ul>
         <div>Contact Me at Patrick.M.Professional [at] gmail [dot] com</div>
+        <LayoutSelector
+          {...this.props}
+          />
 
 
 

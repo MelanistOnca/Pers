@@ -8,78 +8,98 @@ import React from 'react';
 import { render, ReactDOMServer } from 'react-dom';
 
 import $ from 'jquery';
-// import Site from './site';
+
 // import Test from './test2';
 
 import Head from './head';
 import Body from './body';
 import Foot from './foot';
 
-// console.log(typeof 'sdgsadg');
-// console.log(typeof Test);
+
+export default class App extends React.Component{
+  // constructor(props){
+  constructor(){
+    // console.log(props, 'was props in constructor');
+    // super(props);
+    super();
+    this.state = {
+      selectedLayout : 'placeholder layout label',
+      layoutOptions : ['tooMuchColor','twitterMimic','facebookMimic', 'patreonMimic', 'amazonMimic']
+    }
+    //if a this needs to be bound for a function that I later write here, i would need to include the following:
+    // this.functionName = this.functionName.bind(this)
+    // so that the this used therein recognizes its the 'this' from here
+    this.changeLayout = this.changeLayout.bind(this)
+
+  }
+  changeLayout(e){
+    e.preventDefault()
+    // console.log(e, 'was e');
+    // console.log(e.target, 'was e.target');
+    console.log(e.target.id, 'was e.target.id');
+    console.log(this.state, 'was this.state');
+    console.log(this.state.selectedLayout, 'was this.state.selectedLayout');
+    // this.state.selectedLayout = e.target.id
+    this.setState({
+      selectedLayout: e.target.id
+    })
+    console.log(this.state.selectedLayout, 'was this.state.selectedLayout after set');
+  }
+  // getDefaultProps() {
+	// 	console.log(this.props); //note this logs undefined
+	// 	return this.state
+	// }
+  // static defaultProps = this.state
 
 
 
 
-// ReactDOMServer.renderToString('<h1>fuck you</h1>')
-// import Head from './head'
+  render(){
+    // console.log(this.props, 'was this.props in App');
+    // console.log(this.state, 'was this.state in App');
+    // let placeholder = this.state
 
-// export default class App extends React.Component {
-//   render() {
-//
-//     return (
-//       test
-//     );
-//   }
-// }
+    return(
+      <div id="siteContainer">
+        {/*
+          <Test
+          />
+          */}
+        <Head
+          selectedLayout={this.state.selectedLayout}
+          layoutOptions={this.state.layoutOptions}
+          changeLayout={this.changeLayout}
+          />
 
-// render(
-//   (
-//     <Head
-//       />
-//   ),
-//   // $('#container')
-//   document.getElementById('container')
-//
-// )
-// export default class Test extends React.Component{
-//
-//
-// //   render(){
-// //     let styles = {
-// //       background: "red"
-// //     }
-// //     return(
-// //
-// //       <div id="gay" style={styles}>
-// //         gay
-// //       </div>
-// //     )
-// //   }
-// //
-// //
-// //
-// // }
+        <Body
+          />
+
+        <Foot
+          />
+      </div>
+    )
+  }
+  // AddAddressComponent.defaultProps = {
+  //   selectedLayout : this.state.selectedLayout,
+  //   layoutOptions : this.state.layoutOptions
+  // };
+
+  // AddAddressComponent.propTypes = {
+  //   userInfo: React.PropTypes.object,
+  //   cityList: PropTypes.array.isRequired,
+  //   provinceList: PropTypes.array.isRequired,
+  // }
+
+}
 
 render(
   (
-    <div id="siteContainer">
-      {/*
-        <Test
-        />
-        */}
-      <Head
-        />
+    <App
 
-      <Body
-        />
-
-      <Foot
-        />
-    </div>
+      />
   ),
   // $('#container')
   document.getElementById('container')
 
 )
-console.log('app.js loaded');
+// console.log('app.js loaded');
