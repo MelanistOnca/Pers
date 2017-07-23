@@ -12,10 +12,11 @@ export default class Body extends React.Component {
 
   render(){
 
-
+    // console.log(this.props, 'was this.props in body.js');
     return(
       <div id="bodyContainer">
         <Projects
+          {...this.props}
           />
         {/*<Articles
           />

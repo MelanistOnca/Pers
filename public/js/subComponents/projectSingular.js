@@ -13,12 +13,14 @@ export default class Project extends React.Component {
     // let link = this.props.link;
     // console.log(link, 'was link');
     // console.log(this.props.name, 'was this.props.name');
-    let bgStyleTealYellow = {
-      background: "-webkit-linear-gradient(90deg, #42f4d7, #f7f76f)",
-      background: "-moz-linear-gradient(90deg, #42f4d7, #f7f76f)",
-      background: "linear-gradient(90deg, #42f4d7, #f7f76f)"
-      // background: "transparent"
-    }
+    //
+    // let bgStyleTealYellow = {
+    //   background: "-webkit-linear-gradient(90deg, #42f4d7, #f7f76f)",
+    //   background: "-moz-linear-gradient(90deg, #42f4d7, #f7f76f)",
+    //   background: "linear-gradient(90deg, #42f4d7, #f7f76f)"
+    //   // background: "transparent"
+    // }
+    //
     // let bgGrey = {
     //   background: "grey"
     // }
@@ -38,22 +40,25 @@ export default class Project extends React.Component {
 
     }
     // console.log(imgSrc, 'was imgSrc');
+    console.log(this.props, 'was this.props in projectSingular');
 // the div id may be wonky
     return(
       <div id={`${this.props.name}ProjectContainer`}>
-        <div className="projectStyleWrapper">
+        <div className="projectStyleWrapper"
+          style={this.props.layoutDetails[this.props.selectedLayout].project_bg}
+          >
           <div className="projectImageContainer"
-
+            style={ {paddingTop: "1px"}  }
             >
-            <a href={`${this.props.photoLink}`}>
-              <img id={`${this.props.name}PreviewImage`} src={imgSrc}
+            <a href={`${this.props.photoLink}` }>
+              <img style={this.props.layoutDetails[this.props.selectedLayout].img} id={`${this.props.name}PreviewImage`  } src={imgSrc}
                 />
             </a>
 
 
           </div>
           <div className="projectDescriptionContainer"
-            style={bgStyleTealYellow}>
+            >
             <h3><a href={this.props.link}>{this.props.title}</a></h3>
             <p>{this.props.description}</p>
           </div>

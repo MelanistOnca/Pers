@@ -10,21 +10,21 @@ export default class Projects extends React.Component {
 
   render(){
 
-    let bgStyles = {
-      // background: "radial-gradient(circle, #42f4d7, #7A7A7A)"
-      background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
-      background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
-      background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
-      // margin: 0
-      padding: 0
-    }
+    // let bgStyles = {
+    //   // background: "radial-gradient(circle, #42f4d7, #7A7A7A)"
+    //   background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+    //   background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+    //   background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+    //   // margin: 0
+    //   padding: 0
+    // }
     // let bufferStyle = {
     //   margin: "2vh"
     // }
-
+    // console.log(this.props,'was this.props in projects');
     return(
       <div id="projectLinkContainer"
-        style={bgStyles}
+
         >
         <ul>
           <li>
@@ -34,6 +34,7 @@ export default class Projects extends React.Component {
               title="Book List app"
               description="CRUD app that allows you to search a 3rd party API for books. Includes user auth. Uses React, React-redux, PGP, Express, Node, and more. Hosted via Heroku, first load may take additional time."
               photoLink="https://unsplash.com/photos/9BoqXzEeQqM"
+              {...this.props}
               />
             {/* use this photo "https://unsplash.com/photos/9BoqXzEeQqM" with maybe this badge https://unsplash.com/photos/9BoqXzEeQqM?modal=credit-badge */}
           </li>
@@ -44,6 +45,7 @@ export default class Projects extends React.Component {
               title="Dice Game"
               description="Here is a simple dice game"
               photoLink="https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk"
+              {...this.props}
               />
             {/* use this photo https://unsplash.com/search/photos/dice?photo=kLMkSuriEwk with maybe this credit badge https://unsplash.com/search/photos/dice?modal=credit-badge&photo=kLMkSuriEwk */}
           </li>
@@ -54,6 +56,7 @@ export default class Projects extends React.Component {
               title="Menu App"
               description="RoR menu app. Under development. Image is placeholder, link goes to #"
               photoLink="https:////i.imgur.com/ARwY0GWr.jpg"
+              {...this.props}
               />
             {/* find photos */}
           </li>

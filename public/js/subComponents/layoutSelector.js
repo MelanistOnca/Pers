@@ -31,7 +31,7 @@ export default class LayoutSelector extends React.Component {
     // }
     // <li><button id="tooMuchColor" style={linkLikeButtonStyles}>Too Much Color</button></li>
     // <li><button id="twitterMimic" style={linkLikeButtonStyles2}>Mimic Twitter</button></li>
-    let layoutStyles = {
+    let localLayoutStyles = {
       display: "center",
       paddingLeft: '10vw',
       paddingRight: '10vw',
@@ -47,56 +47,39 @@ export default class LayoutSelector extends React.Component {
       minWidth: "20vw"
     }
     //all this shit should be in state
-    let buttonInfoCollection = {//all this shit should be in state
-      tooMuchColor: {
-        id: "tooMuchColor",
-        style: {
 
-        },
-        label: "Too Much Color"
-      },
-      twitter: {
-        id: "mimicTwitter",
-        style: {
+    // let selectionArray = [
+    //
+    // ]
+    // layoutOptions : [
+    //   [ ['tooMuchColor','Too Much Color'], ['twitterMimic', 'Mimic Twitter'], ['facebookMimic','Mimic Facebook'], ['patreonMimic','Mimic Patreon'], ['amazonMimic','Mimic Amazon'] ]
+    // ]
 
-        },
-        label: "Mimic Twitter"
-      },
-      facebook: {
-        id: "mimicFacebook",
-        style: {
+    // console.log(this.props.layoutOptions, 'was layoutOptions');
+    // let buttonGen = []
+    let buttonGen = this.props.layoutOptions.map( (el) => {
+      // console.log(el, 'was el');
+      // let derivedButton =
+      let liKey = `${el[0]}ListThatContainsButton`
+      // buttonGen.push(
+      return (
+        <li key={liKey}>
+         <button id={el[0]} onClick={this.props.changeLayout.bind(this)}>{el[1]}</button>
+        </li>
+      )
+      // console.log(buttonGen, 'was buttonGen in map');
 
-        },
-        label: "Mimic Facebook"
-      },
-      patreon: {
-        id: "mimicPatreon",
-        style: {
-
-        },
-        label: "Mimic Patreon"
-      },
-      amazon: {
-        id: "mimicAmazon",
-        style: {
-
-        },
-        label: "Mimic Amazon"
-      }
-    } //all this shit should be in state.
+      // return derivedButton
+    })
+    // console.log(buttonGen, 'was buttonGen');
 
 
-    return(
-      <div id = "layoutSelectorContainer" style={layoutStyles}>
-        <div>Select Visual Layout</div>
-        <ul style={ulStyle} >
-          <li><button id="tooMuchColor" onClick={this.props.changeLayout.bind(this)} >Too Much Color</button></li>
-          <li><button id="twitterMimic" >Mimic Twitter</button></li>
-          <li><button id="facebookMimic" >Mimic Facebook</button></li>
-          <li><button id="patreonMimic" >Mimic Patreon</button></li>
-          <li><button id="amazonMimic" >Mimic Amazon</button></li>
+    return (
+      <div id={"layoutSelectorContainer"} style={localLayoutStyles}>
+        <div>Select A Visual Layout</div>
+        <ul style={ulStyle}>
+          {buttonGen}
         </ul>
-
       </div>
     )
   }
