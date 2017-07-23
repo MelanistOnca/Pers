@@ -15,8 +15,13 @@ import Head from './head';
 import Body from './body';
 import Foot from './foot';
 
-import twitterMimic from './styles/twitterMimic'
 import tooMuchColor from './styles/tooMuchColor'
+import twitterMimic from './styles/twitterMimic'
+import facebookMimic from './styles/facebookMimic'
+import patreonMimic from './styles/patreonMimic'
+import amazonMimic from './styles/amazonMimic'
+
+import site_bg_switch from './helpers/site_bg_switch'
 
 // console.log(twitterMimic, 'was twitterMimic in app.js');
 
@@ -33,7 +38,10 @@ export default class App extends React.Component{
       ], //this may be redundant if i can just refer to the keys in layoutDetails //now that i've paired the key with the 'human readable' version, probably not redundant anymore?
       layoutDetails: {
         twitterMimic,
-        tooMuchColor
+        tooMuchColor,
+        facebookMimic,
+        patreonMimic,
+        amazonMimic
       }
     }
     //if a this needs to be bound for a function that I later write here, i would need to include the following:
@@ -69,9 +77,11 @@ export default class App extends React.Component{
     // console.log(this.state, 'was this.state in App');
     // let placeholder = this.state
 
+
+
     return(
       <div id="siteContainer"
-        style= {this.state.layoutDetails[this.state.selectedLayout].site_bg}
+        style= {site_bg_switch(this.state)}
         >
         {/*
           <Test
