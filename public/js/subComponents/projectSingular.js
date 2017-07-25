@@ -4,6 +4,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery';
 
+import site_projects_switch from '../helpers/site_projects_switch'
+
 export default class Project extends React.Component {
 
 
@@ -40,12 +42,16 @@ export default class Project extends React.Component {
 
     }
     // console.log(imgSrc, 'was imgSrc');
-    console.log(this.props, 'was this.props in projectSingular');
+    // console.log(this.props, 'was this.props in projectSingular');
 // the div id may be wonky
+// style={this.props.layoutDetails[this.props.selectedLayout].project_bg}
+
+//NOTE TODO i likely need to refactor what the img style refers to with a switch NOTE NOTE
+//NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line
     return(
       <div id={`${this.props.name}ProjectContainer`}>
         <div className="projectStyleWrapper"
-          style={this.props.layoutDetails[this.props.selectedLayout].project_bg}
+          style={site_projects_switch(this.props)}
           >
           <div className="projectImageContainer"
             style={ {paddingTop: "1px"}  }

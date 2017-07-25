@@ -5,13 +5,13 @@ function site_bg_switch(state) {
     case "tooMuchColor": {
       reactiveSiteBG = state.layoutDetails[state.selectedLayout].site_bg
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      // console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "twitterMimic": {
       reactiveSiteBG = state.layoutDetails[state.selectedLayout] //this works for current simplified twitterMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      // console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "facebookMimic": {

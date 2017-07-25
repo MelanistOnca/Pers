@@ -91,12 +91,13 @@ export default class App extends React.Component{
           {...this.state}
           changeLayout={this.changeLayout}
           />
-
         <Body
           {...this.state}
+          changeLayout={this.changeLayout}
           />
 
         <Foot
+          
           />
       </div>
     )

@@ -6,6 +6,9 @@ import $ from 'jquery';
 // import d3 from 'd3';
 import LayoutSelector from './subComponents/layoutSelector'
 
+
+import site_header_switch from './helpers/site_header_switch'
+
 export default class Head extends React.Component {
 
 
@@ -19,15 +22,20 @@ export default class Head extends React.Component {
     let addy = window.location.host
     // console.log(addy, 'was addy');
 
+    //NOTE sub this out with a case switch's return
     let bgStyleTealYellow = {
       background: "-webkit-linear-gradient(90deg, #42f4d7, #f7f76f)",
       background: "-moz-linear-gradient(90deg, #42f4d7, #f7f76f)",
       background: "linear-gradient(90deg, #42f4d7, #f7f76f)"
       // background: "transparent"
     }
+    //NOTE end of sub out
 
+    //TODO implement case switch and call it in style={CASE_SWITCH()}
+
+    // <div id="headContainer" style={bgStyleTealYellow}>
     return(
-      <div id="headContainer" style={bgStyleTealYellow}>
+      <div id="headContainer" style={site_header_switch(this.props)}>
         <div >Welcome to {addy}!</div>
         <ul>
           <li><a href="../assets/PatrickMcWilliams.pdf">Resume</a></li>

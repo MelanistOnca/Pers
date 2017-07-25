@@ -5,6 +5,8 @@ import { render } from 'react-dom';
 import $ from 'jquery';
 import Project from './projectSingular'
 
+import site_body_switch from '../helpers/site_body_switch'
+
 export default class Projects extends React.Component {
 
 
@@ -22,9 +24,15 @@ export default class Projects extends React.Component {
     //   margin: "2vh"
     // }
     // console.log(this.props,'was this.props in projects');
+    //this if block will likely turn into a case switch in helpers
+    // let stylePlaceholder = {}
+    // if(this.props.selectedLayout==='twitterMimic') {
+    //   stylePlaceholder = this.props.layoutDetails[this.props.selectedLayout].listOfTweets
+    // }
+    // style={stylePlaceholder}
     return(
       <div id="projectLinkContainer"
-
+        style={site_body_switch(this.props)}
         >
         <ul>
           <li>
