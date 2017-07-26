@@ -25,11 +25,16 @@ export default class Projects extends React.Component {
     // }
     // console.log(this.props,'was this.props in projects');
     //this if block will likely turn into a case switch in helpers
-    // let stylePlaceholder = {}
+    // let stylePlaceholder = {
+    //   padding: "0",
+    //   margin: "0"
+    // }
     // if(this.props.selectedLayout==='twitterMimic') {
     //   stylePlaceholder = this.props.layoutDetails[this.props.selectedLayout].listOfTweets
     // }
     // style={stylePlaceholder}
+
+
     return(
       <div id="projectLinkContainer"
         style={site_body_switch(this.props)}

@@ -32,25 +32,25 @@ export default class LayoutSelector extends React.Component {
     // }
     // <li><button id="tooMuchColor" style={linkLikeButtonStyles}>Too Much Color</button></li>
     // <li><button id="twitterMimic" style={linkLikeButtonStyles2}>Mimic Twitter</button></li>
-    let localLayoutStyles = {}
-    if(this.props.selectedLayout === 'tooMuchColor'){
-      localLayoutStyles = {
-        display: "center",
-        paddingLeft: '10vw',
-        paddingRight: '10vw',
-        // background: 'black',
-        // opacity: .01
-        background: "rgba(0, 0, 0, 0.1)"
-      }
-    }
+    // let localLayoutStyles = {}
+    // if(this.props.selectedLayout === 'tooMuchColor'){
+    //   localLayoutStyles = {
+    //     display: "center",
+    //     paddingLeft: '10vw',
+    //     paddingRight: '10vw',
+    //     // background: 'black',
+    //     // opacity: .01
+    //     background: "rgba(0, 0, 0, 0.1)"
+    //   }
+    // }
 
-    let ulStyle = {
-      marginTop: '1px',
-      marginBottom: '1px'
-    }
-    let buttonStyle = {
-      minWidth: "20vw"
-    }
+    // let ulStyle = {
+    //   marginTop: '1px',
+    //   marginBottom: '1px'
+    // }
+    // let buttonStyle = {
+    //   minWidth: "20vw"
+    // }
     //all this shit should be in state
 
     // let selectionArray = [
@@ -69,7 +69,11 @@ export default class LayoutSelector extends React.Component {
         // buttonGen.push(
         return (
           <li key={liKey}>
-           <button id={el[0]} onClick={this.props.changeLayout.bind(this)}>{el[1]}</button>
+           <button id={el[0]}
+             onClick={this.props.changeLayout.bind(this)}
+             style = {this.props.layoutDetails[this.props.selectedLayout].button}
+             >
+             {el[1]}</button>
           </li>
         )
         // console.log(buttonGen, 'was buttonGen in map');
@@ -86,9 +90,11 @@ export default class LayoutSelector extends React.Component {
 
 
     return (
-      <div id={"layoutSelectorContainer"} style={localLayoutStyles}>
-        <div>Select A Visual Layout</div>
-        <ul style={ulStyle}>
+      <div id={"layoutSelectorContainer"}
+        style={this.props.layoutDetails[this.props.selectedLayout].layoutSelectorContainer}
+        >
+        <div >Select A Visual Layout</div>
+        <ul style = {this.props.layoutDetails[this.props.selectedLayout].layoutSelectorUl}>
           {buttonGen}
         </ul>
       </div>

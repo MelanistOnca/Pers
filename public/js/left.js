@@ -20,7 +20,6 @@ export default class Left extends React.Component {
       <div id="leftContainer"
         style={site_left_switch(this.props)}
         >
-        left container here
         {hotSwap}
       </div>
     )

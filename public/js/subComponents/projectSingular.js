@@ -45,16 +45,18 @@ export default class Project extends React.Component {
     // console.log(this.props, 'was this.props in projectSingular');
 // the div id may be wonky
 // style={this.props.layoutDetails[this.props.selectedLayout].project_bg}
-
+    let linkStyle = this.props.layoutDetails[this.props.selectedLayout].linkText //for improved readability below
 //NOTE TODO i likely need to refactor what the img style refers to with a switch NOTE NOTE
 //NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line
     return(
-      <div id={`${this.props.name}ProjectContainer`}>
+      <div id={`${this.props.name}ProjectContainer`}
+        style={this.props.layoutDetails[this.props.selectedLayout]}
+        >
         <div className="projectStyleWrapper"
           style={site_projects_switch(this.props)}
           >
           <div className="projectImageContainer"
-            style={ {paddingTop: "1px"}  }
+            style={this.props.layoutDetails[this.props.selectedLayout].imgContainer}
             >
             <a href={`${this.props.photoLink}` }>
               <img style={this.props.layoutDetails[this.props.selectedLayout].img} id={`${this.props.name}PreviewImage`  } src={imgSrc}
@@ -64,8 +66,9 @@ export default class Project extends React.Component {
 
           </div>
           <div className="projectDescriptionContainer"
+
             >
-            <h3><a href={this.props.link}>{this.props.title}</a></h3>
+            <h3><a style={linkStyle} href={this.props.link}>{this.props.title}</a></h3>
             <p>{this.props.description}</p>
           </div>
 
