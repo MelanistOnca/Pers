@@ -28,7 +28,13 @@ const tooMuchColor ={
     background: "linear-gradient(90deg, #42f4d7, #f7f76f)"
   }, //since these backgrounds are the same as the tooMuchColor.project_bg set I should see if there's a way to set it up as a variable or something that I can insert into .header and .project_bg. maybe with spread operator?
   left: {
-    background: "green"
+    // background: "green"
+  },
+  linkText: {
+    color: "pink",
+  },
+  bodyLayout: {
+
   }
 }
 

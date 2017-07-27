@@ -67,13 +67,16 @@ export default class LayoutSelector extends React.Component {
         // let derivedButton =
         let liKey = `${el[0]}ListThatContainsButton`
         // buttonGen.push(
+        console.log(this.props, 'was this.props in this.props.layoutOptions.map button generator');
         return (
           <li key={liKey}>
-           <button id={el[0]}
+           <button id={`${el[0]}Button`}
              onClick={this.props.changeLayout.bind(this)}
              style = {this.props.layoutDetails[this.props.selectedLayout].button}
              >
-             {el[1]}</button>
+            <span id={el[0]}
+              style = {this.props.layoutDetails[this.props.selectedLayout].buttonSpan}>{el[1]}</span>
+           </button>
           </li>
         )
         // console.log(buttonGen, 'was buttonGen in map');
@@ -88,7 +91,7 @@ export default class LayoutSelector extends React.Component {
 
     // console.log(buttonGen, 'was buttonGen');
 
-
+    //NOTE TODO probably want get the layout buttons to look like the tweet button.
     return (
       <div id={"layoutSelectorContainer"}
         style={this.props.layoutDetails[this.props.selectedLayout].layoutSelectorContainer}

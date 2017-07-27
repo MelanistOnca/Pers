@@ -34,7 +34,11 @@ export default class App extends React.Component{
     this.state = {
       selectedLayout : 'twitterMimic',
       layoutOptions : [
-        ['tooMuchColor','Too Much Color'], ['twitterMimic', 'Mimic Twitter'], ['facebookMimic','Mimic Facebook'], ['patreonMimic','Mimic Patreon'], ['amazonMimic','Mimic Amazon']
+        ['twitterMimic', 'Mimic Twitter'],
+        // ['facebookMimic','Mimic Facebook'],
+        // ['patreonMimic','Mimic Patreon'],
+        // ['amazonMimic','Mimic Amazon'],
+        ['tooMuchColor','Too Much Color']
       ], //this may be redundant if i can just refer to the keys in layoutDetails //now that i've paired the key with the 'human readable' version, probably not redundant anymore?
       layoutDetails: {
         twitterMimic,
@@ -56,12 +60,15 @@ export default class App extends React.Component{
     // console.log(e.target, 'was e.target');
     // console.log(e.target.id, 'was e.target.id');
     // console.log(this.state, 'was this.state');
-    console.log(this.state.selectedLayout, 'was this.state.selectedLayout');
+    // console.log(this.state.selectedLayout, 'was this.state.selectedLayout');
     // this.state.selectedLayout = e.target.id
+    // this.state.selectedLayout = e.target.id //seemed to be having problems with the setState thing, adding this as a workaround
+    // console.log(this.state.selectedLayout, 'was this.state.selectedLayout after this.state.selectedLayout = e.target.id ');
     this.setState({
       selectedLayout: e.target.id
     })
-    console.log(this.state.selectedLayout, 'was this.state.selectedLayout after set');
+    console.log(this.state.selectedLayout, 'was this.state.selectedLayout after setState');
+
   }
   // getDefaultProps() {
 	// 	console.log(this.props); //note this logs undefined
@@ -97,7 +104,7 @@ export default class App extends React.Component{
           />
 
         <Foot
-          
+
           />
       </div>
     )

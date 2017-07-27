@@ -10,9 +10,12 @@ const twitterMimic = {
   // marginTop: "1vh",
   // color: "green",
   // margin: "0",
+  fontFamily: "'Arimo', sans-serif",
   linkText: {
     color: "#1DA1F2",
-    fontWeight: "bold"
+    // fontWeight: "bold"
+    // fontSize: "calc( (15px + 2vh)/2vh)"
+    // fontSize: "calc( 15px + 2vh)"
   },
   welcome: {
     background: "#1DA1F2",
@@ -22,7 +25,7 @@ const twitterMimic = {
     listStyle: "none",
 
   },
-  tweet: {
+  tweet: { //this styling probably should be renamed? or maybe what's returned in site_projects_switch
     color: "#14171a",
     atSymbolTextColor: "#657786",
     backgroundColor: "#ffffff",
@@ -32,11 +35,24 @@ const twitterMimic = {
     width: "100%",
     // maxWidth: "60%"
     // marginTop: "1vh" //this needs to not be active for list to have no space. aka this probably needs to stay margin: "0"
+    margin: "0",
+    fontFamily: "Arial"
+  },
+  usernameAtStyle: {
+    color: "#657786",
+    // textDecoration: "unset"
+    fontWeight: "100",
+    fontSize: "2vh",
+    marginTop: "5vh"
   },
   // innerText: {
   //   borderTop: "1px rgb(230, 236, 240) solid",
   //   borderBottom: "1px rgb(230, 236, 240) solid"
   // },
+  bodyLayout: {
+    display: "grid",
+    gridTemplateColumns: "20% 1% 60% 19%"//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
+  },
   body: {//formerly listOfTweets
   // listOfTweets: {
     display: "block",
@@ -84,7 +100,7 @@ const twitterMimic = {
     // border: "1px black solid",
     // margin: "1px"
     width: "20%",
-    legnth: "100%",
+    height: "100%",
     maxWidth: "100%"
 
   },
@@ -104,11 +120,14 @@ const twitterMimic = {
   },
   layoutSelectorContainer: {
   // layoutSelectorHeader: {
-    fontSize:"2.5vh", fontWeight:"bold",
+    fontSize:"2.5vh",
+    // fontWeight:"bold",
     // textAlign: "-webkit-center",
     textAlign: "center",
     background: "#ffffff",
-    marginRight: "1px"
+    marginRight: "1px",
+    // height: "100%"
+    paddingBottom: "3vh"
   },
   layoutSelectorUl: {
     display: "center",
@@ -119,12 +138,33 @@ const twitterMimic = {
   },
   button: {
     // padding: "auto",
-    width: "60%",
+    width: "65%",
     display: "block",
     verticalAlign: "middle",
     // margin-left: "5%"
-    margin: "0 auto" //"vertical horizontal"
+    margin: "10px auto", //"vertical horizontal"
     // margin: "auto 10%"
+    // margin      : 0,
+    padding     : "0",
+    border      : "0",
+    background  : "transparent",
+    // font-family : inherit,
+    // font-size   : 1em,
+    cursor: "pointer"
+  },
+  buttonSpan: {
+    background: "#4AB3F4", //twitter blue, button version
+    display: "block",
+    border: "rbga(0,0,0,0)",
+    borderRadius: "100px",
+    height: "3.5vh",
+    color: "#FFFFFF",
+    paddingTop: "1vh",
+    // margin: "1vh 0"
+    fontFamily: "'Arimo', sans-serif",
+    // fontSize: "14px"
+    // fontSize: "2.3vh"
+    fontSize: "calc(7px + 1vh)" //this is a neat as fuck solution to minimum responsive font sizing which I found at https://stackoverflow.com/a/39962030 . while it doesn't address maximum font size, you could maybe do something like calc( (7px+1vh)/1vh ) to slow the growth of the font size such that your target max might not be reachable on most devices. based on some quick testing with linkText above, this approach seems to work
   }
 }
 

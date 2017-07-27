@@ -9,6 +9,12 @@ const patreonMimic = {
   dark_bg: {
     backgroundColor: "rgb(5, 45, 73)",
     color: "white", //rgb(255, 255, 255)
+  },
+  linkText: {
+    color: "orange",
+  },
+  bodyLayout: {
+
   }
 }
 

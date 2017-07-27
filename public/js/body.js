@@ -26,7 +26,7 @@ export default class Body extends React.Component {
       gridTemplateColumns: "20% 1% 60% 19%"//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
     }
     return(
-      <div id="bodyContainer" style = {stylePlaceholder}>
+      <div id="bodyContainer" style = {this.props.layoutDetails[this.props.selectedLayout].bodyLayout}>
         <Left
           {...this.props}
 

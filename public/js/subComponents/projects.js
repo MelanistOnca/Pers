@@ -34,7 +34,7 @@ export default class Projects extends React.Component {
     // }
     // style={stylePlaceholder}
 
-
+//NOTE TODO probably want to put a header on the projects list to mimic the Tweets header from tweet list  
     return(
       <div id="projectLinkContainer"
         style={site_body_switch(this.props)}

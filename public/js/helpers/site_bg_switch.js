@@ -1,5 +1,6 @@
 
 function site_bg_switch(state) {
+  console.log(state, 'was state in site_bg_switch');
   let reactiveSiteBG = {}
   switch (state.selectedLayout) {
     case "tooMuchColor": {

@@ -4,7 +4,13 @@
 const amazonMimic = {
   // placeholder: 'value'
   backgroundColor: "yellow",
-  color: "blue"
+  color: "blue",
+  linkText: {
+    color: "blue",
+  },
+  bodyLayout: {
+
+  }
 }
 
 

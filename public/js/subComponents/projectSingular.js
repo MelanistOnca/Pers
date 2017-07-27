@@ -45,7 +45,22 @@ export default class Project extends React.Component {
     // console.log(this.props, 'was this.props in projectSingular');
 // the div id may be wonky
 // style={this.props.layoutDetails[this.props.selectedLayout].project_bg}
-    let linkStyle = this.props.layoutDetails[this.props.selectedLayout].linkText //for improved readability below
+    let linkStyle = this.props.layoutDetails[this.props.selectedLayout].linkText
+    let usernameStyle = this.props.layoutDetails[this.props.selectedLayout].usernameAtStyle //for improved readability below
+
+    let titleMod = (this.props.selectedLayout === 'twitterMimic') ? `@${this.props.title}` : this.props.title
+
+    let titleLine;
+    if(this.props.selectedLayout === 'twitterMimic') {
+      titleLine = <h3><a style={linkStyle} href={this.props.link}>{this.props.title}</a>
+      <span style={usernameStyle}>{titleMod}</span></h3>
+    } else {
+      titleLine = <h3><a style={linkStyle} href={this.props.link}>{this.props.title}</a>
+      </h3>
+    }
+
+
+
 //NOTE TODO i likely need to refactor what the img style refers to with a switch NOTE NOTE
 //NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line
     return(
@@ -66,9 +81,8 @@ export default class Project extends React.Component {
 
           </div>
           <div className="projectDescriptionContainer"
-
             >
-            <h3><a style={linkStyle} href={this.props.link}>{this.props.title}</a></h3>
+            {titleLine}
             <p>{this.props.description}</p>
           </div>
 

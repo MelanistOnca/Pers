@@ -1,5 +1,4 @@
-/*the below line uses the closest free font to match twitter's helvetica neue*/
-/*font-family: 'Arimo', sans-serif;*/
+
 
 div {
   /*border: 1px solid #FBA81A;*/
@@ -184,10 +183,6 @@ body {
 }
 .projectImageContainer {
 
-}
-
-h3 {
-  margin: 0;
 }
 
 #otherLinkContainer {

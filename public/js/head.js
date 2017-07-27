@@ -50,13 +50,14 @@ export default class Head extends React.Component {
     // // <p style={{margin:"inherit"}}></p>
     // end of thingySet
     // let linkColorInherit = {color:"inherit"}
+    console.log(this.props.layoutDetails[this.props.selectedLayout], 'was this.props.layoutDetails[this.props.selectedLayout]');
     let linkStyle = this.props.layoutDetails[this.props.selectedLayout].linkText //for improved readability below
 
     return(
       <div id="headContainer" style={site_header_switch(this.props)}>
 
         <ul
-
+          style={{fontWeight: "bold"}}
           >
           <li><a style={linkStyle} href="../assets/PatrickMcWilliams.pdf">Resume</a></li>
 
