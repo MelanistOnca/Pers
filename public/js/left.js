@@ -10,8 +10,7 @@ export default class Left extends React.Component {
 
 
   render(){
-    console.log(this.props, 'was this.props in left.js');
-    console.log(this.props, 'was this.props in left.js');
+    // console.log(this.props, 'was this.props in left.js');
     let hotSwap = <div></div>
     if(this.props.selectedLayout === 'twitterMimic'){
       hotSwap = <LayoutSelector {...this.props} />

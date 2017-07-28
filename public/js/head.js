@@ -8,6 +8,7 @@ import LayoutSelector from './subComponents/layoutSelector'
 
 
 import site_header_switch from './helpers/site_header_switch'
+import head_header_switch from './helpers/head_header_switch'
 
 export default class Head extends React.Component {
 
@@ -41,7 +42,7 @@ export default class Head extends React.Component {
         {...this.props}
         />
     }
-
+    // let welcomeDiv =
     // <div id="headContainer" style={bgStyleTealYellow}>
 
     // thingySet
@@ -51,7 +52,16 @@ export default class Head extends React.Component {
     // end of thingySet
     // let linkColorInherit = {color:"inherit"}
     console.log(this.props.layoutDetails[this.props.selectedLayout], 'was this.props.layoutDetails[this.props.selectedLayout]');
-    let linkStyle = this.props.layoutDetails[this.props.selectedLayout].linkText //for improved readability below
+    let linkStyle =  this.props.layoutDetails[this.props.selectedLayout].linkText//for improved readability below
+    // console.log(linkStyle, 'linkStyle before [...]');
+    // let linkStyle = { ...this.props.layoutDetails[this.props.selectedLayout].linkText, ...this.props.layoutDetails[this.props.selectedLayout].splash }
+    // console.log(linkStyle, 'linkStyle after [...]');
+
+    let splashStyle = this.props.layoutDetails[this.props.selectedLayout].splash
+    console.log(splashStyle);
+
+    // let testCase = {linkStyle, splashStyle}
+    // console.log(testCase, 'was testCase');
 
     return(
       <div id="headContainer" style={site_header_switch(this.props)}>
@@ -59,7 +69,7 @@ export default class Head extends React.Component {
         <ul
           style={{fontWeight: "bold"}}
           >
-          <li><a style={linkStyle} href="../assets/PatrickMcWilliams.pdf">Resume</a></li>
+          <li><a style={splashStyle} href="../assets/PatrickMcWilliams.pdf">Resume</a></li>
 
           <li><a style={linkStyle} href="https://www.linkedin.com/in/mcwilliamspatrick">LinkedIn</a></li>
           <li><a style={linkStyle} href="https://github.com/MelanistOnca">GitHub</a></li>

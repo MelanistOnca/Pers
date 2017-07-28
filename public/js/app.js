@@ -32,7 +32,8 @@ export default class App extends React.Component{
     // super(props);
     super();
     this.state = {
-      selectedLayout : 'twitterMimic',
+      // selectedLayout : 'twitterMimic',
+      selectedLayout : 'tooMuchColor',
       layoutOptions : [
         ['twitterMimic', 'Mimic Twitter'],
         // ['facebookMimic','Mimic Facebook'],

@@ -7,7 +7,7 @@ export default class LayoutSelector extends React.Component {
 
 
   render(){
-    console.log(this.props, 'was this.props in layoutSelector');
+    // console.log(this.props, 'was this.props in layoutSelector');
     if(this.props.selectedLayout === 'twitterMimic') console.log('I may want to make the layout select buttons move to the left sidebar');
 
     // let linkLikeButtonStyles = {
@@ -67,7 +67,7 @@ export default class LayoutSelector extends React.Component {
         // let derivedButton =
         let liKey = `${el[0]}ListThatContainsButton`
         // buttonGen.push(
-        console.log(this.props, 'was this.props in this.props.layoutOptions.map button generator');
+        // console.log(this.props, 'was this.props in this.props.layoutOptions.map button generator');
         return (
           <li key={liKey}>
            <button id={`${el[0]}Button`}
