@@ -15,16 +15,16 @@ export default class Body extends React.Component {
   render(){
 
     // console.log(this.props, 'was this.props in body.js');
-    let stylePlaceholder = {
-      // marginTop: "2vh",
-      // position: "relative",
-      // background: "green"
-      display: "grid",
-      // gridTemplateColumns: "1fr,3fr,1fr"
-      // gridTemplateColumns: "1fr 3fr 1fr"
-      // gridTemplateColumns: "20% 60% 20%"
-      gridTemplateColumns: "20% 1% 60% 19%"//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
-    }
+    // let stylePlaceholder = {
+    //   // marginTop: "2vh",
+    //   // position: "relative",
+    //   // background: "green"
+    //   display: "grid",
+    //   // gridTemplateColumns: "1fr,3fr,1fr"
+    //   // gridTemplateColumns: "1fr 3fr 1fr"
+    //   // gridTemplateColumns: "20% 60% 20%"
+    //   gridTemplateColumns: "20% 1% 60% 19%"//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
+    // }
     return(
       <div id="bodyContainer" style = {this.props.layoutDetails[this.props.selectedLayout].bodyLayout}>
         <Left

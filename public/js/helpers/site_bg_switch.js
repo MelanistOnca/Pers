@@ -4,7 +4,8 @@ function site_bg_switch(state) {
   let reactiveSiteBG = {}
   switch (state.selectedLayout) {
     case "tooMuchColor": {
-      reactiveSiteBG = state.layoutDetails[state.selectedLayout].site_bg
+      // reactiveSiteBG = state.layoutDetails[state.selectedLayout].site_bg
+      reactiveSiteBG = state.layoutDetails[state.selectedLayout]
 
       // console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
     }

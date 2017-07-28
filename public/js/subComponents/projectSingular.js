@@ -63,9 +63,10 @@ export default class Project extends React.Component {
 
 //NOTE TODO i likely need to refactor what the img style refers to with a switch NOTE NOTE
 //NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line
+// style={this.props.layoutDetails[this.props.selectedLayout]}
     return(
       <div id={`${this.props.name}ProjectContainer`}
-        style={this.props.layoutDetails[this.props.selectedLayout]}
+        
         >
         <div className="projectStyleWrapper"
           style={site_projects_switch(this.props)}

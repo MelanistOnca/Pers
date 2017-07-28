@@ -164,7 +164,7 @@ const twitterMimic = {
     fontFamily: "'Arimo', sans-serif",
     // fontSize: "14px"
     // fontSize: "2.3vh"
-    fontSize: "calc(7px + 1vh)" //this is a neat as fuck solution to minimum responsive font sizing which I found at https://stackoverflow.com/a/39962030 . while it doesn't address maximum font size, you could maybe do something like calc( (7px+1vh)/1vh ) to slow the growth of the font size such that your target max might not be reachable on most devices. based on some quick testing with linkText above, this approach seems to work
+    fontSize: "calc(7px + 1vh)" //this is a neat as fuck solution to minimum responsive font sizing which I found at https://stackoverflow.com/a/39962030 . while it doesn't address maximum font size, you could maybe do something like calc( (7px+1vh)/1vh ) to slow the growth of the font size such that your target max might not be reachable on most devices. based on some quick testing with linkText above
   }
 }
 

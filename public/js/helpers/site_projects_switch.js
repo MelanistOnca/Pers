@@ -3,7 +3,7 @@ function site_projects_switch(state) {
   let reactiveSiteProjects = {}
   switch (state.selectedLayout) {
     case "tooMuchColor": {
-      reactiveSiteProjects = state.layoutDetails[state.selectedLayout].project_bh
+      reactiveSiteProjects = state.layoutDetails[state.selectedLayout].project_bg
 
       // console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
     }

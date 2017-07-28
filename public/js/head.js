@@ -34,14 +34,14 @@ export default class Head extends React.Component {
 
     //TODO implement case switch and call it in style={CASE_SWITCH()}
 
-    let layoutSelectorPresent = <div id="selectorPlaceholder"></div>
-
-    if(this.props.selectedLayout !== 'twitterMimic') {
-      layoutSelectorPresent =
-      <LayoutSelector
-        {...this.props}
-        />
-    }
+    // let layoutSelectorPresent = <div id="selectorPlaceholder"></div>
+    //
+    // if(this.props.selectedLayout !== 'twitterMimic') {
+    //   layoutSelectorPresent =
+    //   <LayoutSelector
+    //     {...this.props}
+    //     />
+    // }
     // let welcomeDiv =
     // <div id="headContainer" style={bgStyleTealYellow}>
 
@@ -51,14 +51,14 @@ export default class Head extends React.Component {
     // // <p style={{margin:"inherit"}}></p>
     // end of thingySet
     // let linkColorInherit = {color:"inherit"}
-    console.log(this.props.layoutDetails[this.props.selectedLayout], 'was this.props.layoutDetails[this.props.selectedLayout]');
-    let linkStyle =  this.props.layoutDetails[this.props.selectedLayout].linkText//for improved readability below
+    // console.log(this.props.layoutDetails[this.props.selectedLayout], 'was this.props.layoutDetails[this.props.selectedLayout]');
+    // let linkStyle =  this.props.layoutDetails[this.props.selectedLayout].linkText//for improved readability below
     // console.log(linkStyle, 'linkStyle before [...]');
     // let linkStyle = { ...this.props.layoutDetails[this.props.selectedLayout].linkText, ...this.props.layoutDetails[this.props.selectedLayout].splash }
     // console.log(linkStyle, 'linkStyle after [...]');
 
-    let splashStyle = this.props.layoutDetails[this.props.selectedLayout].splash
-    console.log(splashStyle);
+    // let splashStyle = this.props.layoutDetails[this.props.selectedLayout].splash
+    // console.log(splashStyle);
 
     // let testCase = {linkStyle, splashStyle}
     // console.log(testCase, 'was testCase');
@@ -66,28 +66,30 @@ export default class Head extends React.Component {
     return(
       <div id="headContainer" style={site_header_switch(this.props)}>
 
-        <ul
-          style={{fontWeight: "bold"}}
-          >
-          <li><a style={splashStyle} href="../assets/PatrickMcWilliams.pdf">Resume</a></li>
-
-          <li><a style={linkStyle} href="https://www.linkedin.com/in/mcwilliamspatrick">LinkedIn</a></li>
-          <li><a style={linkStyle} href="https://github.com/MelanistOnca">GitHub</a></li>
-          {/*<li><a href="">General Assembly</a></li>*/}
-          {/*
-          <li>Follow <a href="https://twitter.com/uroborosinc"> @UroborosInc</a> on Twitter</li>
-          */} {/*find embed code to get the twitter icon*/}
-
-
-        </ul>
-        <ul id="welcome" style={this.props.layoutDetails[this.props.selectedLayout].welcome}
-          >
-          <li >Welcome to {addy}!</li>
-          <li >Contact Me at Patrick.M.Professional [at] gmail [dot] com</li>
-        </ul>
-        <p></p>
-        {layoutSelectorPresent}
+        {head_header_switch(addy, this.props)}
       </div>
     )
   }
 }
+
+// <ul
+//   style={{fontWeight: "bold"}}
+//   >
+//   <li><a style={splashStyle} href="../assets/PatrickMcWilliams.pdf">Resume</a></li>
+//
+//   <li><a style={linkStyle} href="https://www.linkedin.com/in/mcwilliamspatrick">LinkedIn</a></li>
+//   <li><a style={linkStyle} href="https://github.com/MelanistOnca">GitHub</a></li>
+//   {/*<li><a href="">General Assembly</a></li>*/}
+//   {/*
+//   <li>Follow <a href="https://twitter.com/uroborosinc"> @UroborosInc</a> on Twitter</li>
+//   */} {/*find embed code to get the twitter icon*/}
+//
+//
+// </ul>
+// <ul id="welcome" style={this.props.layoutDetails[this.props.selectedLayout].welcome}
+//   >
+//   <li >Welcome to {addy}!</li>
+//   <li >Contact Me at Patrick.M.Professional [at] gmail [dot] com</li>
+// </ul>
+// <p></p>
+// {layoutSelectorPresent}
