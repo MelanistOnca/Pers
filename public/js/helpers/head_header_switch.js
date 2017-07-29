@@ -3,6 +3,9 @@ import LayoutSelector from '../subComponents/layoutSelector'
 
 function head_header_switch(address, props) {
   let reactiveHeadHeader = {}
+  console.log(props.selectedLayout, 'was props.selectedLayout');
+  console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
+  console.log('$$$$$$$');
   let linkStyle =  props.layoutDetails[props.selectedLayout].linkText//for improved readability below
   // let splashStyle = props.layoutDetails[props.selectedLayout].splash
   let welcomeStyle = props.layoutDetails[props.selectedLayout].welcome //only using once currently, if not used again subout the variable for the object tree in the ul below
@@ -26,18 +29,30 @@ function head_header_switch(address, props) {
   </ul>
   switch (props.selectedLayout) {
     case "tooMuchColor": {
-      reactiveHeadHeader =
-      <div>
-        <div id="welcome">
-          {welcomeString}
-        </div>
-        {linkList}
-        <div>{contactString}</div>
+      if(props.initialLayoutSelected===true){
+        reactiveHeadHeader =
+        <div>
+          <div id="welcome">
+            {welcomeString}
+          </div>
+          {linkList}
+          <div>{contactString}</div>
 
-        <LayoutSelector
-          {...props}
-          />
-      </div>
+          <LayoutSelector
+            {...props}
+            />
+        </div>
+      } else {
+        reactiveHeadHeader =
+        <div>
+          <div id="welcome">
+            {welcomeString}
+          </div>
+          {linkList}
+          <div>{contactString}</div>
+        </div>
+      }
+
 
 
       console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);

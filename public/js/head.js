@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import $ from 'jquery';
 // import d3 from 'd3';
 import LayoutSelector from './subComponents/layoutSelector'
-
+//this import probably doesn't need to be here with the switch
 
 import site_header_switch from './helpers/site_header_switch'
 import head_header_switch from './helpers/head_header_switch'
@@ -62,11 +62,12 @@ export default class Head extends React.Component {
 
     // let testCase = {linkStyle, splashStyle}
     // console.log(testCase, 'was testCase');
+    let headCase = head_header_switch(addy, this.props) //when i was calling head_header_switch(addy, this.props) directly in the {} below, i would occasionally get an error for layoutDetails props being undefined. setting the call to a variable seems to prevent this.
 
     return(
       <div id="headContainer" style={site_header_switch(this.props)}>
 
-        {head_header_switch(addy, this.props)}
+        {headCase}
       </div>
     )
   }

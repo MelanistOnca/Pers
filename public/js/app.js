@@ -13,7 +13,9 @@ import $ from 'jquery';
 
 import Head from './head';
 import Body from './body';
+// import Body from './body2';
 import Foot from './foot';
+import LayoutSelector from './subComponents/layoutSelector';
 
 import tooMuchColor from './styles/tooMuchColor'
 import twitterMimic from './styles/twitterMimic'
@@ -47,7 +49,8 @@ export default class App extends React.Component{
         facebookMimic,
         patreonMimic,
         amazonMimic
-      }
+      },
+      initialLayoutSelected : false
     }
     //if a this needs to be bound for a function that I later write here, i would need to include the following:
     // this.functionName = this.functionName.bind(this)
@@ -66,7 +69,8 @@ export default class App extends React.Component{
     // this.state.selectedLayout = e.target.id //seemed to be having problems with the setState thing, adding this as a workaround
     // console.log(this.state.selectedLayout, 'was this.state.selectedLayout after this.state.selectedLayout = e.target.id ');
     this.setState({
-      selectedLayout: e.target.id
+      selectedLayout: e.target.id,
+      initialLayoutSelected: true
     })
     console.log(this.state.selectedLayout, 'was this.state.selectedLayout after setState');
 
@@ -84,7 +88,40 @@ export default class App extends React.Component{
     // console.log(this.props, 'was this.props in App');
     // console.log(this.state, 'was this.state in App');
     // let placeholder = this.state
+    let stylePreSelect = {
+      position: "absolute",
+      // position:"relative",
+      // marginTop: "20%",
+      border: "1px black solid",
+      // padding: "50%",
+      top: "20%",
+      // width: "100%",
+      // height: "100%",
+      // margin: "auto 0",
+      // marginLeft: "30%"
+      left: "40%"
+    }
+    // console.log(stylePreSelect);
 
+    let initialSelect;
+
+    if(this.state.initialLayoutSelected===true){
+      initialSelect =
+      <Body
+        {...this.state}
+        changeLayout={this.changeLayout}
+        />
+    } else {
+      initialSelect =
+      <div id="initialSelector" style={stylePreSelect}>
+        <LayoutSelector
+          {...this.state}
+          changeLayout={this.changeLayout}
+
+          />
+      </div>
+
+    }
 
 
     return(
@@ -99,16 +136,37 @@ export default class App extends React.Component{
           {...this.state}
           changeLayout={this.changeLayout}
           />
-        <Body
-          {...this.state}
-          changeLayout={this.changeLayout}
-          />
+
+        {initialSelect}
 
         <Foot
 
           />
       </div>
     )
+    // return(
+    //   <div id="siteContainer"
+    //     style= {site_bg_switch(this.state)}
+    //     >
+    //     {/*
+    //       <Test
+    //       />
+    //       */}
+    //     <Head
+    //       {...this.state}
+    //       changeLayout={this.changeLayout}
+    //       />
+    //
+    //     <Body
+    //       {...this.state}
+    //       changeLayout={this.changeLayout}
+    //       />
+    //
+    //     <Foot
+    //
+    //       />
+    //   </div>
+    // )
   }
   // AddAddressComponent.defaultProps = {
   //   selectedLayout : this.state.selectedLayout,

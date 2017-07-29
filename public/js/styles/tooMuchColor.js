@@ -64,7 +64,7 @@ const tooMuchColor ={
     // color: "rgb(255, 210, 135)" //a different orange
     // color: "rgb(188, 125, 20)"//a third orange //ends up looking brown. orange ain't gonna work sweety.
     color: "rgb(233, 113, 133)"
-  }
+  },
   button: { //probably need this and buttonSpan to make the buttons show up properly on mobile mode
 
   },
