@@ -5,6 +5,7 @@ const tooMuchColor ={
   background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
   background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
   background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+
   // margin: 0
   padding: 0,
   project_bg:  {
@@ -20,7 +21,9 @@ const tooMuchColor ={
     // boxShadow: "inset 1vw 1vh 3em 3em rgba(0, 0, 0, 0.2)",
     boxShadow: "offset 1vw 1vh 3em 3em rgba(0, 0, 0, 0.2), inset 1vw 1vh 3em 3em rgba(255, 255, 255, 0.6)",
     borderRadius: "1vw",
-    margin: "3px"
+    margin: "3px",
+    width: "60%",
+    marginLeft: "25%"
   },
   site_bg: {
     // background: "radial-gradient(circle, #42f4d7, #7A7A7A)"
@@ -28,7 +31,8 @@ const tooMuchColor ={
     background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
     background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
     // margin: 0
-    padding: 0
+    padding: 0,
+    // backgroundRepeat: "repeat-x",
   },
   img: {
     borderRadius: "1vw"
@@ -69,7 +73,7 @@ const tooMuchColor ={
 
   },
   buttonSpan: {
-
+    margin: "1vh 1vw"
   }
 }
 

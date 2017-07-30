@@ -62,12 +62,13 @@ export default class Head extends React.Component {
 
     // let testCase = {linkStyle, splashStyle}
     // console.log(testCase, 'was testCase');
-    let headCase = head_header_switch(addy, this.props) //when i was calling head_header_switch(addy, this.props) directly in the {} below, i would occasionally get an error for layoutDetails props being undefined. setting the call to a variable seems to prevent this.
+    // let headCase = head_header_switch(addy, this.props) //when i was calling head_header_switch(addy, this.props) directly in the {} below, i would occasionally get an error for layoutDetails props being undefined. setting the call to a variable seems to prevent this. //looks like this came back
+    
 
+    // {headCase}
     return(
       <div id="headContainer" style={site_header_switch(this.props)}>
-
-        {headCase}
+        {head_header_switch(addy, this.props)}
       </div>
     )
   }

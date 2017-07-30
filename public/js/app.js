@@ -62,6 +62,8 @@ export default class App extends React.Component{
     e.preventDefault()
     // console.log(e, 'was e');
     // console.log(e.target, 'was e.target');
+    // console.log(e.target.class, 'was e.target.class');
+    // console.log(e.target.className, 'was e.target.className');
     // console.log(e.target.id, 'was e.target.id');
     // console.log(this.state, 'was this.state');
     // console.log(this.state.selectedLayout, 'was this.state.selectedLayout');
@@ -69,7 +71,7 @@ export default class App extends React.Component{
     // this.state.selectedLayout = e.target.id //seemed to be having problems with the setState thing, adding this as a workaround
     // console.log(this.state.selectedLayout, 'was this.state.selectedLayout after this.state.selectedLayout = e.target.id ');
     this.setState({
-      selectedLayout: e.target.id,
+      selectedLayout: e.target.className,
       initialLayoutSelected: true
     })
     console.log(this.state.selectedLayout, 'was this.state.selectedLayout after setState');

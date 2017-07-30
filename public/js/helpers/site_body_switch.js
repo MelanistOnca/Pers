@@ -3,7 +3,7 @@ function site_body_switch(state) {
   let reactiveSiteBody = {}
   switch (state.selectedLayout) {
     case "tooMuchColor": {
-      reactiveSiteBody = state.layoutDetails[state.selectedLayout].left
+      reactiveSiteBody = state.layoutDetails[state.selectedLayout]
 
       console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
     }
