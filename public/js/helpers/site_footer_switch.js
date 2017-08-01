@@ -1,37 +1,37 @@
 
-function site_right_switch(props) {
-  let reactiveSiteRight = {}
+function site_footer_switch(props) {
+  let reactiveSiteFooter = {}
   switch (props.selectedLayout) {
     case "tooMuchColor": {
-      reactiveSiteRight = props.layoutDetails[props.selectedLayout].right
+      reactiveSiteFooter = props.layoutDetails[props.selectedLayout].footer
 
       // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "twitterMimic": {
-      reactiveSiteRight = props.layoutDetails[props.selectedLayout].right
-      // console.log(props.layoutDetails[props.selectedLayout].right , 'was props.layoutDetails[props.selectedLayout].right  in site_right_switch');
+      reactiveSiteFooter = props.layoutDetails[props.selectedLayout].footer
+      // console.log(props.layoutDetails[props.selectedLayout].footer , 'was props.layoutDetails[props.selectedLayout].footer  in site_footer_switch');
 
       // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
       // console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
     }
     break;
     case "facebookMimic": {
-      reactiveSiteRight = props.layoutDetails[props.selectedLayout] //this works for current simplified facebookMimic, will likely need to change once i get actual styling involved
+      reactiveSiteFooter = props.layoutDetails[props.selectedLayout] //this works for current simplified facebookMimic, will likely need to change once i get actual styling involved
 
       console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "patreonMimic": {
-      console.log(props, 'was props in site_right_switch');
+      console.log(props, 'was props in site_footer_switch');
       console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
-      reactiveSiteRight = props.layoutDetails[props.selectedLayout].white_bg //this works for current simplified patreonMimic, will likely need to change once i get actual styling involved
+      reactiveSiteFooter = props.layoutDetails[props.selectedLayout].white_bg //this works for current simplified patreonMimic, will likely need to change once i get actual styling involved
 
       console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "amazonMimic": {
-      reactiveSiteRight = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      reactiveSiteFooter = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
 
       console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
@@ -41,7 +41,7 @@ function site_right_switch(props) {
     console.log("Something went to shit and no layout is selected. FIX. IT. This log coming from app.js");
   }
 
-  return reactiveSiteRight
+  return reactiveSiteFooter
 }
 
-module.exports = site_right_switch
+module.exports = site_footer_switch

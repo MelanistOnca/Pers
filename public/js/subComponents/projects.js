@@ -4,6 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery';
 import Project from './projectSingular'
+import TweetHeader from './tweetHeader'
 
 import site_body_switch from '../helpers/site_body_switch'
 
@@ -34,11 +35,14 @@ export default class Projects extends React.Component {
     // }
     // style={stylePlaceholder}
 
-//NOTE TODO probably want to put a header on the projects list to mimic the Tweets header from tweet list  
+
     return(
       <div id="projectLinkContainer"
         style={site_body_switch(this.props)}
         >
+        <TweetHeader
+          {...this.props}
+          />
         <ul>
           <li>
             <Project

@@ -27,13 +27,11 @@ export default class Body extends React.Component {
     //   // gridTemplateColumns: "20% 60% 20%"
     //   gridTemplateColumns: "20% 1% 60% 19%"//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
     // }
-    //NOTE TODO: maybe have the body be the "select layout" component and then once that is selected, show that layout's body. //we want the header to show. //probably add a state "initialLayoutSelected: false" that sets to true after the selection is made. once that's true, have the regular body show?
-    // NOTE NOTE NOTE NOTE TODO TODO TODO TODO TODO
-    // TODO
+
     let initialSelect;
     //
     if(this.props.initialLayoutSelected===false){
-      console.log('was this.props.initialLayoutSelected===false');
+      // console.log('was this.props.initialLayoutSelected===false');
       initialSelect =
       <div id="bodyContainer" style = {this.props.layoutDetails[this.props.selectedLayout].bodyLayout}>
         <LayoutSelector
@@ -41,7 +39,7 @@ export default class Body extends React.Component {
           />
       </div>
     } else {
-      console.log('was else for this.props.initialLayoutSelected===false');
+      // console.log('was else for this.props.initialLayoutSelected===false');
       initialSelect =
       <div id="bodyContainer" style = {this.props.layoutDetails[this.props.selectedLayout].bodyLayout}>
         <Left
@@ -61,7 +59,7 @@ export default class Body extends React.Component {
       </div>
 
     }
-    console.log('!!!!!!!!!!!!!!!!!');
+    // console.log('!!!!!!!!!!!!!!!!!');
     // let stylePreSelect = {
     //   position: "relative",
     //   marginTop: "20%",

@@ -58,6 +58,8 @@ body {
 #siteContainer {
   display: flex;
   flex-direction: column;
+  /*display: grid;
+  grid-template-rows: 15% 75%;*/
   /*flex-direction: row;*/
   /*justify-content: center;*/
   /*justify-content: flex-end;*/
@@ -101,6 +103,7 @@ body {
   text-align: center;
   position: fixed;
   z-index: 5000;
+  /*grid-column: 1;*/
 }
 
 #headContainer ul {
@@ -123,12 +126,15 @@ body {
   /*position:*/
   /*position: absolute;*/
   /*top: 3vh*/
-  top: 20%;
+  /*top: 20%;*/
   /*padding-bottom: 100%;*/
+  /*grid-column: 2;*/
 }
 
 #footContainer {
   /*background-color: yellow;*/
+  /*position: fixed;*/
+  /*bottom: 0;*/
 }
 
 #articleLinkContainer {

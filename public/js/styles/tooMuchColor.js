@@ -5,6 +5,7 @@ const tooMuchColor ={
   background: "-webkit-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
   background: "-moz-radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
   background: "radial-gradient(circle, #7A7A7A, #7A7A7A 30%, #42f4d7)",
+  // height: "100%",
 
   // margin: 0
   padding: 0,
@@ -33,6 +34,7 @@ const tooMuchColor ={
     // margin: 0
     padding: 0,
     // backgroundRepeat: "repeat-x",
+    // height: "100%"
   },
   img: {
     borderRadius: "1vw"
@@ -54,6 +56,7 @@ const tooMuchColor ={
   },
   bodyLayout: {
     marginTop: "3vh",
+    top: "20%"
     // width: "100%",
     // height: "100%"
 
@@ -70,6 +73,15 @@ const tooMuchColor ={
     color: "rgb(233, 113, 133)"
   },
   button: { //probably need this and buttonSpan to make the buttons show up properly on mobile mode
+    // background: "rgb(192, 192, 192)",
+    // borderBottom: "none", //switches to "outset" for mobile version of browser
+    // border: "0px solid black",
+    // borderRadius: "50%"
+
+    background: "white",
+    border: "0",
+    borderRadius: "4px"
+    //getting things like :active or :hover to work with react styling requires other modules, so we're ignoring it for now
 
   },
   buttonSpan: {

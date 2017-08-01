@@ -99,7 +99,6 @@ export default class LayoutSelector extends React.Component {
 
     // console.log(buttonGen, 'was buttonGen');
 
-    //NOTE TODO probably want get the layout buttons to look like the tweet button.
     return (
       <div id={"layoutSelectorContainer"}
         style={this.props.layoutDetails[this.props.selectedLayout].layoutSelectorContainer}

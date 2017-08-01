@@ -7,9 +7,35 @@ import $ from 'jquery';
 import site_projects_switch from '../helpers/site_projects_switch'
 
 export default class Project extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      hovered: false
+    }
+  }
+  hoverToggle(e){
+    e.preventDefault()
+    // console.log(this, 'was this in hoverToggle');
+    // console.log(e, 'was e in hoverToggle');
+    // console.log("onHover called");
+    // console.log(e, 'was e in onHover');
+    // console.log(e.target, 'was e.target in onHover');
+    // console.log(e.target.style, 'was e.target.style in onHover');
+    // console.log(style, 'was style in onHover');
+    // console.log(this, 'was this in onHover');
+    // e.target.style = style
+    // console.log(e.target.style, 'was e.target.style in after e.target.style = style');
+    this.setState({
+      hovered: !this.state.hovered
+    })
 
+
+  } //may need to add state to this component so that the full name area can change styling based off of that. see
+  // https://stackoverflow.com/a/33000431
+  // for probable implementation
 
   render(){
+    // console.log(this.state, 'was this.state in render of projectSingular2');
     // let idLabel = `${this.props.name}ProjectContainer`;
     // console.log(idLabel, 'was idLabel');
     // let link = this.props.link;
@@ -26,6 +52,7 @@ export default class Project extends React.Component {
     // let bgGrey = {
     //   background: "grey"
     // }
+
     let imgSrc = '';
     switch (this.props.name) {
       case "bookList":
@@ -45,14 +72,25 @@ export default class Project extends React.Component {
     // console.log(this.props, 'was this.props in projectSingular');
 // the div id may be wonky
 // style={this.props.layoutDetails[this.props.selectedLayout].project_bg}
+    let unHovered = this.props.layoutDetails[this.props.selectedLayout].unHoveredUsername
     let linkStyle = this.props.layoutDetails[this.props.selectedLayout].linkText
+    let hoverStyle =
+    this.state.hovered ? linkStyle : unHovered
+    // let hoverStyle;
+    // this.state.hovered ? hoverStyle=linkStyle : hoverStyle=unHovered
     let usernameStyle = this.props.layoutDetails[this.props.selectedLayout].usernameAtStyle //for improved readability below
 
     let titleMod = (this.props.selectedLayout === 'twitterMimic') ? `@${this.props.title}` : this.props.title
-
+    // console.log(unHovered, 'was unHovered');
     let titleLine;
+    // style={linkStyle}
     if(this.props.selectedLayout === 'twitterMimic') {
-      titleLine = <h3><a style={linkStyle} href={this.props.link}>{this.props.title}</a>
+      titleLine = <h3><a
+        style={hoverStyle}
+        href={this.props.link}
+        onMouseEnter={this.hoverToggle.bind(this)}
+        onMouseLeave={this.hoverToggle.bind(this)}
+        >{this.props.title}</a>
       <span style={usernameStyle}>{titleMod}</span></h3>
     } else {
       titleLine = <h3><a style={linkStyle} href={this.props.link}>{this.props.title}</a>
@@ -61,12 +99,12 @@ export default class Project extends React.Component {
 
 
 
-//NOTE TODO i likely need to refactor what the img style refers to with a switch NOTE NOTE
-//NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line
+//NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line TODO add state here to determine whether or not the titleLin <a> is being hovered, then apply twitterMimic.linkText styling to it
+// TODO 2: need to scale down the description text size for mobile. im seeing the grey background again when i switch to a mobile view and the descriptions go longer than the page
 // style={this.props.layoutDetails[this.props.selectedLayout]}
     return(
       <div id={`${this.props.name}ProjectContainer`}
-        
+
         >
         <div className="projectStyleWrapper"
           style={site_projects_switch(this.props)}

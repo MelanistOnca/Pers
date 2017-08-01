@@ -23,16 +23,7 @@ export default class Head extends React.Component {
     let addy = window.location.host
     // console.log(addy, 'was addy');
 
-    //NOTE sub this out with a case switch's return
-    // let bgStyleTealYellow = {
-    //   background: "-webkit-linear-gradient(90deg, #42f4d7, #f7f76f)",
-    //   background: "-moz-linear-gradient(90deg, #42f4d7, #f7f76f)",
-    //   background: "linear-gradient(90deg, #42f4d7, #f7f76f)"
-    //   // background: "transparent"
-    // }
-    //NOTE end of sub out
 
-    //TODO implement case switch and call it in style={CASE_SWITCH()}
 
     // let layoutSelectorPresent = <div id="selectorPlaceholder"></div>
     //
@@ -63,7 +54,7 @@ export default class Head extends React.Component {
     // let testCase = {linkStyle, splashStyle}
     // console.log(testCase, 'was testCase');
     // let headCase = head_header_switch(addy, this.props) //when i was calling head_header_switch(addy, this.props) directly in the {} below, i would occasionally get an error for layoutDetails props being undefined. setting the call to a variable seems to prevent this. //looks like this came back
-    
+
 
     // {headCase}
     return(

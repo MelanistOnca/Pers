@@ -6,16 +6,22 @@ const twitterMimic = {
   backgroundColor: "#e6ecf0",
   // border: "1px solid black",
   // borderTop: "1px rgb(230, 236, 240) solid",
-  borderBottom: "1px rgb(230, 236, 240) solid",
+  // borderBottom: "1px rgb(230, 236, 240) solid",
   // marginTop: "1vh",
   // color: "green",
   // margin: "0",
+  // height: "100%",
   fontFamily: "'Arimo', sans-serif",
+  fontSize: "calc(7px + 1vh)",
   linkText: {
     color: "#1DA1F2",
     // fontWeight: "bold"
     // fontSize: "calc( (15px + 2vh)/2vh)"
     // fontSize: "calc( 15px + 2vh)"
+  },
+  unHoveredUsername: {
+    color: "#14171a",
+    textDecoration: "none"
   },
   welcome: {
     background: "#1DA1F2",
@@ -36,7 +42,9 @@ const twitterMimic = {
     // maxWidth: "60%"
     // marginTop: "1vh" //this needs to not be active for list to have no space. aka this probably needs to stay margin: "0"
     margin: "0",
-    fontFamily: "Arial"
+    // fontFamily: "Arial",
+    borderBottom: "1px rgb(230, 236, 240) solid",
+    // fontSize: "calc(12px + 1vh)"
   },
   usernameAtStyle: {
     color: "#657786",
@@ -45,13 +53,37 @@ const twitterMimic = {
     fontSize: "2vh",
     marginTop: "5vh"
   },
+  tweetHeader: {
+    display: "flex",
+    // border: "1px solid black",
+    position: "relative",
+    background: "#E8F5FD",
+    color: "#1DA1F2",
+    padding: "1vh 0"
+  },
+  tweetHeaderText: {
+    background: "#ffffff",
+    position: "relative",
+    // position: "absolute",
+    right: "0",
+    // paddingLeft: "5%",
+    marginLeft: "5%",
+    padding: "1vh 1vw 1vh 5%",
+    width: "70%",
+    borderRadius: "18px"
+  },
   // innerText: {
   //   borderTop: "1px rgb(230, 236, 240) solid",
   //   borderBottom: "1px rgb(230, 236, 240) solid"
   // },
   bodyLayout: {
     display: "grid",
-    gridTemplateColumns: "20% 1% 60% 19%"//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
+    gridTemplateColumns: "20% 1% 60% 19%",//for twitter spacing in-between first and second valuable columns (the 20/60 ones)
+    top: "15%",
+  },
+  headLayout: {
+    display: "grid",
+    gridTemplateColumns: "20% 80%"
   },
   body: {//formerly listOfTweets
   // listOfTweets: {
@@ -72,22 +104,34 @@ const twitterMimic = {
     // display: "inline",
     // verticalAlign: "middle"
     // height: "100%"
+
   },
   img: { //this is for the portrait normally found on a posted tweet. i will likely have to differentiate this from other img-s on the page
     height: "48px",
     width: "48px",
     // display: "inline",
     // verticalAlign: "middle",
-    paddingTop: "50%",
+    // paddingTop: "50%",
     // bottom: "0"
+    marginTop: "3px",
+    borderRadius: "50%"
+  },
+  headImg: {
+    height: "32px",
+    width: "32px",
+    borderRadius: "50%",
+    // width: "20%"
+    marginLeft: "5%"
   },
   header: {
     color: "#14171a",
     backgroundColor: "#ffffff", //placeholder
     // height: "25%",
     // minHeight: "50px",
+    minHeight: "10%",
     // position: "static"
-    width: "100%"
+    width: "100%",
+    left: "0"
   },
   left: {
     position: "absolute",
@@ -120,7 +164,7 @@ const twitterMimic = {
   },
   layoutSelectorContainer: {
   // layoutSelectorHeader: {
-    fontSize:"2.5vh",
+    // fontSize:"2.5vh",
     // fontWeight:"bold",
     // textAlign: "-webkit-center",
     textAlign: "center",
@@ -139,6 +183,8 @@ const twitterMimic = {
   button: {
     // padding: "auto",
     width: "65%",
+    minWidth: "25px",
+    maxWidth: "80%",
     display: "block",
     verticalAlign: "middle",
     // margin-left: "5%"
@@ -157,14 +203,28 @@ const twitterMimic = {
     display: "block",
     border: "rbga(0,0,0,0)",
     borderRadius: "100px",
-    height: "3.5vh",
+    height: "calc(12px + 2.5vh)",
     color: "#FFFFFF",
+
     paddingTop: "1vh",
+    paddingBottom: "1px",
     // margin: "1vh 0"
     fontFamily: "'Arimo', sans-serif",
     // fontSize: "14px"
     // fontSize: "2.3vh"
     fontSize: "calc(7px + 1vh)" //this is a neat as fuck solution to minimum responsive font sizing which I found at https://stackoverflow.com/a/39962030 . while it doesn't address maximum font size, you could maybe do something like calc( (7px+1vh)/1vh ) to slow the growth of the font size such that your target max might not be reachable on most devices. based on some quick testing with linkText above
+  },
+  footer: {
+    // position: "relative",
+    // bottom: "20%",
+    // bottom: "0",
+    background: "#ffffff",
+    // paddingLeft: "0"
+    marginTop: "50%",
+    paddingTop: "10%",
+    paddingBottom: "5%",
+    wordWrap: "break-word"
+
   }
 }
 

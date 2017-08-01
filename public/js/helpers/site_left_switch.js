@@ -1,41 +1,41 @@
 
-function site_left_switch(state) {
-  console.log('~~~~~~');
-  console.log(state,'state');
+function site_left_switch(props) {
+  // console.log('~~~~~~');
+  // console.log(props,'props');
   let reactiveSiteLeft = {}
-  switch (state.selectedLayout) {
+  switch (props.selectedLayout) {
     case "tooMuchColor": {
-      reactiveSiteLeft = state.layoutDetails[state.selectedLayout].left
+      reactiveSiteLeft = props.layoutDetails[props.selectedLayout].left
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "twitterMimic": {
-      reactiveSiteLeft = state.layoutDetails[state.selectedLayout].left
-      // console.log(state.layoutDetails[state.selectedLayout].left , 'was state.layoutDetails[state.selectedLayout].left  in site_left_switch');
+      reactiveSiteLeft = props.layoutDetails[props.selectedLayout].left
+      // console.log(props.layoutDetails[props.selectedLayout].left , 'was props.layoutDetails[props.selectedLayout].left  in site_left_switch');
 
-      // console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
-      console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
+      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
+      // console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
     }
     break;
     case "facebookMimic": {
-      reactiveSiteLeft = state.layoutDetails[state.selectedLayout] //this works for current simplified facebookMimic, will likely need to change once i get actual styling involved
+      reactiveSiteLeft = props.layoutDetails[props.selectedLayout] //this works for current simplified facebookMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "patreonMimic": {
-      console.log(state, 'was state in site_left_switch');
-      console.log(state.layoutDetails[state.selectedLayout], 'was state.layoutDetails[state.selectedLayout]');
-      reactiveSiteLeft = state.layoutDetails[state.selectedLayout].white_bg //this works for current simplified patreonMimic, will likely need to change once i get actual styling involved
+      console.log(props, 'was props in site_left_switch');
+      console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
+      reactiveSiteLeft = props.layoutDetails[props.selectedLayout].white_bg //this works for current simplified patreonMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "amazonMimic": {
-      reactiveSiteLeft = state.layoutDetails[state.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      reactiveSiteLeft = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
 

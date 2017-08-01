@@ -3,7 +3,10 @@ function site_body_switch(state) {
   let reactiveSiteBody = {}
   switch (state.selectedLayout) {
     case "tooMuchColor": {
+      // reactiveSiteBody = state.layoutDetails[state.selectedLayout].bodyLayout //using this style results in grey after scrolling
       reactiveSiteBody = state.layoutDetails[state.selectedLayout]
+      //when i'm NOT using .bodyLayout i do NOT have the grey after scrolling
+      //TODO: figure out wtf is causing the grey after scrolling
 
       console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
     }

@@ -14,7 +14,7 @@ import $ from 'jquery';
 import Head from './head';
 import Body from './body';
 // import Body from './body2';
-import Foot from './foot';
+// import Foot from './foot';
 import LayoutSelector from './subComponents/layoutSelector';
 
 import tooMuchColor from './styles/tooMuchColor'
@@ -34,8 +34,8 @@ export default class App extends React.Component{
     // super(props);
     super();
     this.state = {
-      // selectedLayout : 'twitterMimic',
       selectedLayout : 'tooMuchColor',
+      // selectedLayout : 'twitterMimic',
       layoutOptions : [
         ['twitterMimic', 'Mimic Twitter'],
         // ['facebookMimic','Mimic Facebook'],
@@ -74,7 +74,7 @@ export default class App extends React.Component{
       selectedLayout: e.target.className,
       initialLayoutSelected: true
     })
-    console.log(this.state.selectedLayout, 'was this.state.selectedLayout after setState');
+    // console.log(this.state.selectedLayout, 'was this.state.selectedLayout after setState');
 
   }
   // getDefaultProps() {
@@ -141,9 +141,7 @@ export default class App extends React.Component{
 
         {initialSelect}
 
-        <Foot
 
-          />
       </div>
     )
     // return(
