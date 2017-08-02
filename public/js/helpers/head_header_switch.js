@@ -7,7 +7,6 @@ function head_header_switch(address, props) {
   // console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
   // console.log('$$$$$$$');
   let linkStyle =  props.layoutDetails[props.selectedLayout].linkText//for improved readability below
-  // let splashStyle = props.layoutDetails[props.selectedLayout].splash
   let welcomeStyle = props.layoutDetails[props.selectedLayout].welcome //only using once currently, if not used again subout the variable for the object tree in the ul below
   let headLayout = props.layoutDetails[props.selectedLayout].headLayout
 
@@ -23,11 +22,6 @@ function head_header_switch(address, props) {
     <li><a style={linkStyle} href="https://www.linkedin.com/in/mcwilliamspatrick">LinkedIn</a></li>
     <li><a style={linkStyle} href="https://github.com/MelanistOnca">GitHub</a></li>
     {/*<li><a href="">General Assembly</a></li>*/}
-    {/*
-    <li>Follow <a href="https://twitter.com/uroborosinc"> @UroborosInc</a> on Twitter</li>
-    */} {/*find embed code to get the twitter icon*/}
-
-
   </ul>
 
   let iconRoute = '../../assets/icons/'
@@ -114,13 +108,9 @@ function head_header_switch(address, props) {
         </div>
       }
 
-
-
-      console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
     }
     break;
     case "twitterMimic": {
-      // {linkList}
       reactiveHeadHeader =
       <div>
         <div id="iconList" style={headLayout}>
@@ -137,8 +127,6 @@ function head_header_switch(address, props) {
         <p></p>
       </div>
 
-      // {layoutSelectorPresent}
-      console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
     }
     break;
     case "facebookMimic": {

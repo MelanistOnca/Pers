@@ -73,7 +73,9 @@ export default class LayoutSelector extends React.Component {
         //ran into issue that ended up being due id naming conventions below.
         // the issue was that in putting a span inside the button, and using e.target.id, i would sometimes get the wrong id, i.e. "twitterMimic" vs "twitterMimicButton". I have added a className to both which is now what i use in the onClick passed function. I have also made the ids more specific, including 'Button' and 'Span' at the end of each rather than having that descriptor only on one.
         return (
-          <li key={liKey}>
+          <li key={liKey}
+            style={this.props.layoutDetails[this.props.selectedLayout].buttonList}
+            >
            <button
              className={el[0]}
              id={`${el[0]}Button`}

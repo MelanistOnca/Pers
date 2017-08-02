@@ -1,42 +1,36 @@
 
-function site_body_switch(state) {
+function site_body_switch(props) {
   let reactiveSiteBody = {}
-  switch (state.selectedLayout) {
+  switch (props.selectedLayout) {
     case "tooMuchColor": {
-      // reactiveSiteBody = state.layoutDetails[state.selectedLayout].bodyLayout //using this style results in grey after scrolling
-      reactiveSiteBody = state.layoutDetails[state.selectedLayout]
+      // reactiveSiteBody = props.layoutDetails[props.selectedLayout].bodyLayout //using this style results in grey after scrolling
+      reactiveSiteBody = props.layoutDetails[props.selectedLayout].body
       //when i'm NOT using .bodyLayout i do NOT have the grey after scrolling
-      //TODO: figure out wtf is causing the grey after scrolling
-
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      //TODO: figure out wtf is causing the grey after scrolling //TODONE: adding background: "..." rules to tooMuchColor.body fixed this, since this was the element scolling beyond the 100vh site background.
     }
     break;
     case "twitterMimic": {
-      reactiveSiteBody = state.layoutDetails[state.selectedLayout].body
-      // console.log(state.layoutDetails[state.selectedLayout].left , 'was state.layoutDetails[state.selectedLayout].left  in site_left_switch');
-
-      // console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
-      console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
+      reactiveSiteBody = props.layoutDetails[props.selectedLayout].body
     }
     break;
     case "facebookMimic": {
-      reactiveSiteBody = state.layoutDetails[state.selectedLayout] //this works for current simplified facebookMimic, will likely need to change once i get actual styling involved
+      reactiveSiteBody = props.layoutDetails[props.selectedLayout] //this works for current simplified facebookMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "patreonMimic": {
-      console.log(state, 'was state in site_body_switch');
-      console.log(state.layoutDetails[state.selectedLayout], 'was state.layoutDetails[state.selectedLayout]');
-      reactiveSiteBody = state.layoutDetails[state.selectedLayout].white_bg //this works for current simplified patreonMimic, will likely need to change once i get actual styling involved
+      console.log(props, 'was props in site_body_switch');
+      console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
+      reactiveSiteBody = props.layoutDetails[props.selectedLayout].white_bg //this works for current simplified patreonMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "amazonMimic": {
-      reactiveSiteBody = state.layoutDetails[state.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      reactiveSiteBody = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
 
-      console.log(`case of ${state.selectedLayout} in app.js switch for siteContainer styling`);
+      console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
 

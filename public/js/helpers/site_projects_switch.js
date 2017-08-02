@@ -3,16 +3,11 @@ function site_projects_switch(props) {
   let reactiveSiteProjects = {}
   switch (props.selectedLayout) {
     case "tooMuchColor": {
-      reactiveSiteProjects = props.layoutDetails[props.selectedLayout].project_bg
-
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
+      reactiveSiteProjects = props.layoutDetails[props.selectedLayout].projects
     }
     break;
     case "twitterMimic": {
       reactiveSiteProjects = props.layoutDetails[props.selectedLayout].tweet
-      // console.log(props.layoutDetails[props.selectedLayout].tweet , 'was props.layoutDetails[props.selectedLayout].tweet  in site_projects_switch');
-
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "facebookMimic": {

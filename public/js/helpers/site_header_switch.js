@@ -5,15 +5,11 @@ function site_header_switch(props) {
     case "tooMuchColor": {
       reactiveSiteHeader = props.layoutDetails[props.selectedLayout].header
 
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "twitterMimic": {
       reactiveSiteHeader = props.layoutDetails[props.selectedLayout].header
-      // console.log(props.layoutDetails[props.selectedLayout].header , 'was props.layoutDetails[props.selectedLayout].header  in site_header_switch');
 
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
-      // console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
     }
     break;
     case "facebookMimic": {

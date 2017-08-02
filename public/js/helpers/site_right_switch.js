@@ -4,16 +4,10 @@ function site_right_switch(props) {
   switch (props.selectedLayout) {
     case "tooMuchColor": {
       reactiveSiteRight = props.layoutDetails[props.selectedLayout].right
-
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "twitterMimic": {
       reactiveSiteRight = props.layoutDetails[props.selectedLayout].right
-      // console.log(props.layoutDetails[props.selectedLayout].right , 'was props.layoutDetails[props.selectedLayout].right  in site_right_switch');
-
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
-      // console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
     }
     break;
     case "facebookMimic": {

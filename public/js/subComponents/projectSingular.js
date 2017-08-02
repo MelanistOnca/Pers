@@ -99,8 +99,7 @@ export default class Project extends React.Component {
 
 
 
-//NOTE i will also want to style the <h3>/<a> in projectDescriptionContainer to look like the twitter username line TODO add state here to determine whether or not the titleLin <a> is being hovered, then apply twitterMimic.linkText styling to it
-// TODO 2: need to scale down the description text size for mobile. im seeing the grey background again when i switch to a mobile view and the descriptions go longer than the page
+
 // style={this.props.layoutDetails[this.props.selectedLayout]}
     return(
       <div id={`${this.props.name}ProjectContainer`}

@@ -5,15 +5,11 @@ function site_footer_switch(props) {
     case "tooMuchColor": {
       reactiveSiteFooter = props.layoutDetails[props.selectedLayout].footer
 
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }
     break;
     case "twitterMimic": {
       reactiveSiteFooter = props.layoutDetails[props.selectedLayout].footer
-      // console.log(props.layoutDetails[props.selectedLayout].footer , 'was props.layoutDetails[props.selectedLayout].footer  in site_footer_switch');
-
-      // console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
-      // console.log('I probably want to subout the link text for icons with maybe mouseover descriptions?');
+  
     }
     break;
     case "facebookMimic": {
