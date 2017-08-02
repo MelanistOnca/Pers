@@ -1,5 +1,4 @@
-/*the below line uses the closest free font to match twitter's helvetica neue*/
-/*font-family: 'Arimo', sans-serif;*/
+
 
 div {
   /*border: 1px solid #FBA81A;*/
@@ -39,15 +38,12 @@ p {
 
 body {
   margin: 0;
-  /*height: 100vh;
-  width: 100vw;*/
-  /*height: 100%;*/
-  /*width: 100%;*/
+  height: 100vh;
+  width: 100vw;
   background-color: #7A7A7A;
   /*border: 2px solid black;*/
   /*position: relative;*/
   max-width: 100%;
-  max-height: 100%;
 
 }
 
@@ -58,8 +54,6 @@ body {
 #siteContainer {
   display: flex;
   flex-direction: column;
-  /*display: grid;
-  grid-template-rows: 15% 75%;*/
   /*flex-direction: row;*/
   /*justify-content: center;*/
   /*justify-content: flex-end;*/
@@ -77,7 +71,7 @@ body {
   /*color: #606060; /* darker grey*/
   /*color: #c9c9c9; /* lighter grey*/
   /*color: #505050;  /* even darker grey*/
-  /*color: #202020; /* black*/
+  color: #202020; /* black*/
 
   /*background-color: #FBA81A;
   color: #0F75BD;*/
@@ -86,12 +80,8 @@ body {
   position: absolute;
   /*position: relative;*/
   /*top: 10vh*/
-  /*width: 100%;
-  height: 100%;*/
-  width: 100vw;
-  height: 100vh;
-  /*overflow: scroll;*/
-  background-repeat: repeat-x;
+  width: 100%;
+  height: 100%;
 
 }
 
@@ -103,7 +93,6 @@ body {
   text-align: center;
   position: fixed;
   z-index: 5000;
-  /*grid-column: 1;*/
 }
 
 #headContainer ul {
@@ -122,19 +111,14 @@ body {
   /*border: 1px green solid;*/
   /*margin: 0;*/
   position: relative;
-  /*position: fixed;*/
   /*position:*/
   /*position: absolute;*/
   /*top: 3vh*/
-  /*top: 20%;*/
-  /*padding-bottom: 100%;*/
-  /*grid-column: 2;*/
+  top: 20%;
 }
 
 #footContainer {
   /*background-color: yellow;*/
-  /*position: fixed;*/
-  /*bottom: 0;*/
 }
 
 #articleLinkContainer {
@@ -190,8 +174,7 @@ body {
   width: 100%;
 }
 .projectStyleWrapper {
-  display: flex;
-  /*background: -webkit-linear-gradient(90deg, rgb(66, 244, 215, .5), rgb(247, 247, 111, .5));*/
+  display: flex
 
 }
 .projectDescriptionContainer {
@@ -202,15 +185,6 @@ body {
 
 }
 
-h3 {
-  margin: 0;
-}
-
 #otherLinkContainer {
   /*background-color: pink;*/
 }
-
-/*#layoutSelectorContainer{
-  /*margin: auto 0;
-  margin: 0 auto;
-}*/
