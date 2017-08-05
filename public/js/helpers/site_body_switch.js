@@ -6,7 +6,7 @@ function site_body_switch(props) {
       // reactiveSiteBody = props.layoutDetails[props.selectedLayout].bodyLayout //using this style results in grey after scrolling
       reactiveSiteBody = props.layoutDetails[props.selectedLayout].body
       //when i'm NOT using .bodyLayout i do NOT have the grey after scrolling
-      //TODO: figure out wtf is causing the grey after scrolling //TODONE: adding background: "..." rules to tooMuchColor.body fixed this, since this was the element scolling beyond the 100vh site background.
+      //TODO: figure out wtf is causing the grey after scrolling //TODONE: adding background: "..." rules to tooMuchColor.body fixed this, since this was the element scolling beyond the 100vh site background
     }
     break;
     case "twitterMimic": {
