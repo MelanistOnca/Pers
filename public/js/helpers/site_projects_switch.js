@@ -7,6 +7,7 @@ function site_projects_switch(props) {
     }
     break;
     case "twitterMimic": {
+      console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
       reactiveSiteProjects = props.layoutDetails[props.selectedLayout].tweet
     }
     break;

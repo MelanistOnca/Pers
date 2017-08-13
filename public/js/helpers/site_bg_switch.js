@@ -9,7 +9,8 @@ function site_bg_switch(state) {
     }
     break;
     case "twitterMimic": {
-      reactiveSiteBG = state.layoutDetails[state.selectedLayout].site 
+      console.log(`case of ${state.selectedLayout} in app.js switch for headContainer styling`);
+      reactiveSiteBG = state.layoutDetails[state.selectedLayout].site
     }
     break;
     case "facebookMimic": {

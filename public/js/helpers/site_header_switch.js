@@ -8,6 +8,7 @@ function site_header_switch(props) {
     }
     break;
     case "twitterMimic": {
+      console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
       reactiveSiteHeader = props.layoutDetails[props.selectedLayout].header
 
     }

@@ -8,8 +8,9 @@ function site_footer_switch(props) {
     }
     break;
     case "twitterMimic": {
+      console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
       reactiveSiteFooter = props.layoutDetails[props.selectedLayout].footer
-  
+
     }
     break;
     case "facebookMimic": {

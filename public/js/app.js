@@ -28,19 +28,20 @@ import site_bg_switch from './helpers/site_bg_switch'
 // console.log(twitterMimic, 'was twitterMimic in app.js');
 
 export default class App extends React.Component{
-  
+
   constructor(){
     // console.log(props, 'was props in constructor');
     // super(props);
     super();
     this.state = {
-      selectedLayout : 'tooMuchColor',
+      // selectedLayout : 'tooMuchColor',
       // selectedLayout : 'twitterMimic',
+      selectedLayout : 'amazonMimic',
       layoutOptions : [
         ['twitterMimic', 'Mimic Twitter'],
         // ['facebookMimic','Mimic Facebook'],
         // ['patreonMimic','Mimic Patreon'],
-        // ['amazonMimic','Mimic Amazon'],
+        ['amazonMimic','Mimic Amazon'],
         ['tooMuchColor','Too Much Color']
       ], //this may be redundant if i can just refer to the keys in layoutDetails //now that i've paired the key with the 'human readable' version, probably not redundant anymore?
       layoutDetails: {

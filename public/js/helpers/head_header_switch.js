@@ -1,8 +1,18 @@
 import React from 'react';
 import LayoutSelector from '../subComponents/layoutSelector'
+console.log('returns from head_header_switch need to be html entities and/or react components');
 
 function head_header_switch(address, props) {
   let reactiveHeadHeader = {}
+  // let defaultHeader =
+  // <div>
+  //   <div id="welcome">
+  //     {welcomeString}
+  //   </div>
+  //   {linkList}
+  //   <div>{contactString}</div>
+  // </div>;
+  // console.log(defaultHeader, 'was defaultHeader');
   // console.log(props.selectedLayout, 'was props.selectedLayout');
   // console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
   // console.log('$$$$$$$');
@@ -106,11 +116,13 @@ function head_header_switch(address, props) {
           {linkList}
           <div>{contactString}</div>
         </div>
+        // reactiveHeadHeader = defaultHeader
       }
 
     }
     break;
     case "twitterMimic": {
+      console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
       reactiveHeadHeader =
       <div>
         <div id="iconList" style={headLayout}>
@@ -144,7 +156,15 @@ function head_header_switch(address, props) {
     }
     break;
     case "amazonMimic": {
-      reactiveHeadHeader = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      // reactiveHeadHeader = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      reactiveHeadHeader =
+      <div>
+        <div id="welcome">
+          {welcomeString}
+        </div>
+        {linkList}
+        <div>{contactString}</div>
+      </div>;
 
       console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
     }

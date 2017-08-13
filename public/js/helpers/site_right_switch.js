@@ -7,6 +7,7 @@ function site_right_switch(props) {
     }
     break;
     case "twitterMimic": {
+      console.log(`case of ${props.selectedLayout} in app.js switch for headContainer styling`);
       reactiveSiteRight = props.layoutDetails[props.selectedLayout].right
     }
     break;
