@@ -30,6 +30,7 @@ function site_body_switch(props) {
     break;
     case "amazonMimic": {
       reactiveSiteBody = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      //carousel stuff should probably end up at site_projects_switch.js
 
       console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }

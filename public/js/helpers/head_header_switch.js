@@ -16,7 +16,14 @@ function head_header_switch(address, props) {
   // console.log(props.selectedLayout, 'was props.selectedLayout');
   // console.log(props.layoutDetails[props.selectedLayout], 'was props.layoutDetails[props.selectedLayout]');
   // console.log('$$$$$$$');
-  let linkStyle =  props.layoutDetails[props.selectedLayout].linkText//for improved readability below
+  // NOTE this was linkStyle before i tried to account for amazone white styling on dark background
+  // let linkStyle = props.layoutDetails[props.selectedLayout].linkText//for improved readability below
+  // NOTE end of pre-amazon linkStyle
+  let linkStyle = props.selectedLayout==="amazonMimic" ?
+  props.layoutDetails[props.selectedLayout].lightLinkText
+  :
+  props.layoutDetails[props.selectedLayout].darkLinkText
+  //for improved readability below
   let welcomeStyle = props.layoutDetails[props.selectedLayout].welcome //only using once currently, if not used again subout the variable for the object tree in the ul below
   let headLayout = props.layoutDetails[props.selectedLayout].headLayout
 
@@ -158,11 +165,13 @@ function head_header_switch(address, props) {
     case "amazonMimic": {
       // reactiveHeadHeader = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
       reactiveHeadHeader =
-      <div>
+      <div style={props.layoutDetails[props.selectedLayout].header}>
         <div id="welcome">
           {welcomeString}
         </div>
-        {linkList}
+        <div style={props.layoutDetails[props.selectedLayout].actionsHeader}>
+          {linkList}
+        </div>
         <div>{contactString}</div>
       </div>;
 

@@ -28,7 +28,7 @@ function site_header_switch(props) {
     }
     break;
     case "amazonMimic": {
-      reactiveSiteHeader = props.layoutDetails[props.selectedLayout] //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
+      reactiveSiteHeader = props.layoutDetails[props.selectedLayout].headContainer //this works for current simplified amazonMimic, will likely need to change once i get actual styling involved
 
       console.log(`case of ${props.selectedLayout} in app.js switch for siteContainer styling`);
     }

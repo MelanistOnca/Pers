@@ -35,7 +35,6 @@ export default class Project extends React.Component {
   // for probable implementation
 
   render(){
-    // console.log(this.state, 'was this.state in render of projectSingular2');
     // let idLabel = `${this.props.name}ProjectContainer`;
     // console.log(idLabel, 'was idLabel');
     // let link = this.props.link;

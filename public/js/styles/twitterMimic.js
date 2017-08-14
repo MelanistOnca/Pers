@@ -14,9 +14,9 @@ const twitterMimic = {
   // fontFamily: "'Arimo', sans-serif",
   // fontSize: "calc(7px + 1vh)",
   body: {//formerly listOfTweets
-    display: "block",
+    // display: "block",
     // width: "590px",
-    gridColumn: "3",
+    // gridColumn: "3",
     // gridColumnStart: "2"
     // border: "1px red solid",
     // maxWidth: "60%"
