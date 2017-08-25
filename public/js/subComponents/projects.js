@@ -77,6 +77,28 @@ export default class Projects extends React.Component {
               />
             {/* find photos */}
           </li>
+          <li>
+            <Project
+              name="twitterBot"
+              link="#"
+              title="TBD twitter bot"
+              description="a bot of some kind on twitter"
+              photoLink="https:////i.imgur.com/ARwY0GWr.jpg"
+              {...this.props}
+              />
+            {/* find photos */}
+          </li>
+          <li>
+            <Project
+              name="glitchProject"
+              link="#"
+              title="TBD project on glitch"
+              description="heard glitch is a shiny new thing, need to look into it more"
+              photoLink="https:////i.imgur.com/ARwY0GWr.jpg"
+              {...this.props}
+              />
+            {/* find photos */}
+          </li>
           {/*
           <li>
             <Project
